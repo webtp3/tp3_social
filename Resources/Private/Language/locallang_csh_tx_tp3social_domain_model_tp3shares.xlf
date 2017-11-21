@@ -27,6 +27,118 @@
 			<trans-unit id="xing.description">
 				<source>xing</source>
 			</trans-unit>
+
+            <trans-unit id="tt_content.pi_flexform.layout">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.networks">
+                <source>Netzwerke</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.twitter">
+                <source>Twitter</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.facebook">
+                <source>Facebook</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.google">
+                <source>Google+</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.meinvz">
+                <source>meinVZ</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.youtube">
+                <source>YouTube</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.xing">
+                <source>Xing</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.linkedin">
+                <source>LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.tumblr">
+                <source>Tumblr</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.vkontakte">
+                <source>VKontakte</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.flickr">
+                <source>Flickr</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.googleshare">
+                <source>Google Share</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.t3n">
+                <source>T3N</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.BITusername">
+                <source>bit.ly Benutzername</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.BITapi">
+                <source>bit.ly API-Key</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.twittername">
+                <source>Twitter Benutzername</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.flickrname">
+                <source>Link zum Flickr Fotostream</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.youtubeusername">
+                <source>YouTube Channelname</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.shortener">
+                <source>URL verkuerzer</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style01">
+                <source>Style 01</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style02">
+                <source>Style 02</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style03">
+                <source>Style 03</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style04">
+                <source>Style 04</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style05">
+                <source>Style 05</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style06">
+                <source>Style 06</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style07">
+                <source>Style 07</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style08">
+                <source>Style 08</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style09">
+                <source>Style 09</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style10">
+                <source>Style 10</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style11">
+                <source>Style 11 (original-Buttons)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style12">
+                <source>Style 12 (original-buttons)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style13">
+                <source>Style 13</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.layout.style14">
+                <source>Style 14</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.tco">
+                <source>Twitter t.co</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.bitly">
+                <source>eigenen bit.ly account</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sorting">
+                <source>Sortierung (Komma getrennt)</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

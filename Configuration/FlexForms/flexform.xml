@@ -8,78 +8,80 @@
 			
 			<layout>
 			<TCEforms>
-				<label>LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style</label>
+				<label>LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.layout</label>
 				<onChange>reload</onChange>
 				<config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
+
 					<items type="array">
 						<numIndex index="0" type="array">
-							<numIndex index="0">tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style01</numIndex>
+							<numIndex index="0">layout.style01</numIndex>
 							<numIndex index="1">style01</numIndex>
 						</numIndex>
 						
 						<numIndex index="1" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style02</numIndex>
+							<numIndex index="0">layout.style02</numIndex>
 							<numIndex index="1">style02</numIndex>
 						</numIndex>
 						
 						<numIndex index="2" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style03</numIndex>
+							<numIndex index="0">layout.style03</numIndex>
 							<numIndex index="1">style03</numIndex>
 						</numIndex>
 						
 						<numIndex index="3" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style04</numIndex>
+							<numIndex index="0">layout.style04</numIndex>
 							<numIndex index="1">style04</numIndex>
 						</numIndex> 
 						
 						<numIndex index="4" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style05</numIndex>
+							<numIndex index="0">layout.style05</numIndex>
 							<numIndex index="1">style05</numIndex>
 						</numIndex>
 						
 						<numIndex index="5" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style06</numIndex>
+							<numIndex index="0">layout.style06</numIndex>
 							<numIndex index="1">style06</numIndex>
 						</numIndex>
 						
 						<numIndex index="6" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style07</numIndex>
+							<numIndex index="0">layout.style07</numIndex>
 							<numIndex index="1">style07</numIndex>
 						</numIndex>
 						
 						<numIndex index="7" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style08</numIndex>
+							<numIndex index="0">layout.style08</numIndex>
 							<numIndex index="1">style08</numIndex>
 						</numIndex>
 						
 						<numIndex index="8" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style09</numIndex>
+							<numIndex index="0">layout.style09</numIndex>
 							<numIndex index="1">style09</numIndex>
 						</numIndex>
 						
 						<numIndex index="9" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style10</numIndex>
+							<numIndex index="0">layout.style10</numIndex>
 							<numIndex index="1">style10</numIndex>
 						</numIndex>
 						
 						<numIndex index="10" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style11</numIndex>
+							<numIndex index="0">layout.style11</numIndex>
 							<numIndex index="1">style11</numIndex>
 						</numIndex>
 						
 						<numIndex index="11" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style12</numIndex>
+							<numIndex index="0">layout.style12</numIndex>
 							<numIndex index="1">style12</numIndex>
 						</numIndex>
 						
 						<numIndex index="12" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style13</numIndex>
+							<numIndex index="0">layout.style13</numIndex>
 							<numIndex index="1">style13</numIndex>
 						</numIndex> 
 						
 						<numIndex index="13" type="array">
-							<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_tca.php:style14</numIndex>
+							<numIndex index="0">layout.style14</numIndex>
 							<numIndex index="1">style14</numIndex>
 						</numIndex>                 
 					</items>
@@ -91,7 +93,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style01,style02,style03,style04,style05,style06,style07,style08,style09,style10,style11,style12,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:twitter</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.twitter</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -102,7 +104,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style01,style02,style03,style04,style05,style06,style07,style08,style09,style10,style11,style12,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:facebook</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.facebook</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -113,7 +115,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style11,style12</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:google</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.google</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -124,7 +126,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style01,style03</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:meinvz</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.meinvz</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -135,7 +137,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style02,style03,style04,style05,style06,style07,style08,style09,style10,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:youtube</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.youtube</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -146,7 +148,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style01,style03,style10,style11,style12,style13</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:xing</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.xing</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -157,7 +159,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style01,style03,style04,style05,style06,style07,style08,style09,style10,style11,style12,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:linkedin</label>
+					<label>tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.linkedin</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -168,7 +170,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style03,style04,style05,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:tumblr</label>
+					<label>tumblr</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -179,7 +181,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style05</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:vkontakte</label>
+					<label>vkontakte</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -190,7 +192,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style03,style04,style05,style06,style07,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:flickr</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.flickr</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -201,7 +203,7 @@
 				<TCEforms>
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style11,style12</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:googleshare</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.googleshare</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -212,7 +214,7 @@
 				<TCEforms>
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style11,style12</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:t3n</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.t3n</label>
 					<config>
 						<type>check</type>
 					</config>
@@ -223,7 +225,7 @@
 				<TCEforms>  
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style01,style02,style03,style04,style05,style06,style07,style08,style09,style10,style11,style12,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:twittername</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.twittername</label>
 					<config>
 						<type>input</type>
 						<size>10</size>
@@ -237,7 +239,7 @@
 				<TCEforms>  
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style02,style03,style04,style05,style06,style07,style08,style09,style10,style11,style12,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:youtubeusername</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.youtubeusername</label>
 					<config>
 						<type>input</type>
 						<size>10</size>
@@ -251,7 +253,7 @@
 				<TCEforms>  
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style03,style04,style05,style06,style07,style13,style14</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:flickrname</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.flickrname</label>
 					<config>
 						<type>input</type>
 						<size>30</size>
@@ -263,18 +265,18 @@
 			
 			<shortener>
 				<TCEforms>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:shortener</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.shortener</label>
 					<onChange>reload</onChange>
 					<config>
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:tco</numIndex>
+								<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.tco</numIndex>
 								<numIndex index="1">tco</numIndex>
 							</numIndex>
 							
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:bitly</numIndex>
+								<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.bitly</numIndex>
 								<numIndex index="1">bitly</numIndex>
 							</numIndex>             
 						</items>
@@ -286,7 +288,7 @@
 				<TCEforms>  
 					<exclude>1</exclude>
 					<displayCond>FIELD:shortener:IN:bitly</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:BITusername</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.BITusername</label>
 					<config>
 						<type>input</type>
 						<size>10</size>
@@ -300,7 +302,7 @@
 				<TCEforms>  
 					<exclude>1</exclude>
 					<displayCond>FIELD:shortener:IN:bitly</displayCond>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:BITapi</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.BITapi</label>
 					<config>
 						<type>input</type>
 						<size>35</size>
@@ -312,7 +314,7 @@
 
 			<sorting>
 				<TCEforms>
-					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_tca.php:sorting</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.sorting</label>
 					<config>
 						<type>input</type>
 						<size>35</size>

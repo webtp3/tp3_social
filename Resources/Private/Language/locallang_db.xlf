@@ -3,13 +3,13 @@
 	<file source-language="de" datatype="plaintext" original="messages" date="2017-11-07T20:53:41Z" product-name="tp3_social">
 		<header/>
 		<body>
-			<trans-unit id="tx_tp3_social_domain_model_tp3share">
+			<trans-unit id="tx_tp3social_domain_model_tp3shares.tx_tp3_social_domain_model_tp3share">
 				<source>tp3 Shares</source>
 			</trans-unit>
-			<trans-unit id="tx_tp3_social_domain_model_tp3share.description">
+			<trans-unit id="tx_tp3social_domain_model_tp3shares.tx_tp3_social_domain_model_tp3share.description">
 				<source>Share Icons</source>
 			</trans-unit>
-			<trans-unit id="tx_tp3social_domain_model_tp3shares">
+			<trans-unit id="tx_tp3social_domain_model_tp3shares.tx_tp3social_domain_model_tp3shares">
 				<source>Tp3 Shares</source>
 			</trans-unit>
 			<trans-unit id="tx_tp3social_domain_model_tp3shares.style">
@@ -30,6 +30,135 @@
 			<trans-unit id="tx_tp3social_domain_model_tp3shares.xing">
 				<source>Xing</source>
 			</trans-unit>
+			<trans-unit id="tx_tp3social_domain_model_tp3shares.style.description">
+            	<source>style</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.twitter.description">
+                <source>twitter</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.facebook.description">
+                <source>facebook</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.google.description">
+                <source>google</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.youtube.description">
+                <source>youtube</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.xing.description">
+                <source>xing</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.networks">
+                <source>Netzwerke</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.twitter">
+                <source>Twitter</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.facebook">
+                <source>Facebook</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.google">
+                <source>Google+</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.meinvz">
+                <source>meinVZ</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.youtube">
+                <source>YouTube</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.xing">
+                <source>Xing</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.linkedin">
+                <source>LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.tumblr">
+                <source>Tumblr</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.vkontakte">
+                <source>VKontakte</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.flickr">
+                <source>Flickr</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.googleshare">
+                <source>Google Share</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.t3n">
+                <source>T3N</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.BITusername">
+                <source>bit.ly Benutzername</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.BITapi">
+                <source>bit.ly API-Key</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.twittername">
+                <source>Twitter Benutzername</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.flickrname">
+                <source>Link zum Flickr Fotostream</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.youtubeusername">
+                <source>YouTube Channelname</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.shortener">
+                <source>URL verkuerzer</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style01">
+                <source>Style 01</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style02">
+                <source>Style 02</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style03">
+                <source>Style 03</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style04">
+                <source>Style 04</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style05">
+                <source>Style 05</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style06">
+                <source>Style 06</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style07">
+                <source>Style 07</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style08">
+                <source>Style 08</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style09">
+                <source>Style 09</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style10">
+                <source>Style 10</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style11">
+                <source>Style 11 (original-Buttons)</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style12">
+                <source>Style 12 (original-buttons)</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style13">
+                <source>Style 13</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.style14">
+                <source>Style 14</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.tco">
+                <source>Twitter t.co</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.bitly">
+                <source>eigenen bit.ly account</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3social_domain_model_tp3shares.sorting">
+                <source>Sortierung (Komma getrennt)</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>
