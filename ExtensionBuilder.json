@@ -1,0 +1,150 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    130,
+                    89
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Tp3Shares",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "726244773644"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "style",
+                            "propertyType": "String",
+                            "uid": "1480886189236"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "twitter",
+                            "propertyType": "Boolean",
+                            "uid": "1271569121033"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "facebook",
+                            "propertyType": "Boolean",
+                            "uid": "1244639434999"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "google",
+                            "propertyType": "Boolean",
+                            "uid": "1101804929221"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "youtube",
+                            "propertyType": "Boolean",
+                            "uid": "128004719645"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "xing",
+                            "propertyType": "Boolean",
+                            "uid": "1116040359174"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Share Icons",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 7.6.0-8.9.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "de",
+            "state": "beta",
+            "targetVersion": "7.6.0-7.6.99",
+            "version": "1.0.2"
+        },
+        "extensionKey": "tp3_social",
+        "name": "tp3 social",
+        "originalExtensionKey": "tp3_social",
+        "originalVendorName": "Tp3",
+        "persons": [
+            {
+                "company": "R&P IT Consulting GmbH",
+                "email": "email@thomasruta.de",
+                "name": "Thomas Ruta",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "key": "tp3share",
+                "name": "tp3 Shares"
+            }
+        ],
+        "vendorName": "Tp3"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2017-11-07 08:53",
+        "extension_builder_version": "7.6.18",
+        "be_user": " (1)"
+    }
+}

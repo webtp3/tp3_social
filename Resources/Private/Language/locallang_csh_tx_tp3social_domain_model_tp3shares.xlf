@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2017-11-07T20:53:41Z" product-name="tp3_social">
+		<header/>
+		<body>
+			<trans-unit id="tx_tp3_social_domain_model_tp3share">
+				<source>tp3 Shares</source>
+			</trans-unit>
+			<trans-unit id="tx_tp3_social_domain_model_tp3share.description">
+				<source>Share Icons</source>
+			</trans-unit>
+			<trans-unit id="style.description">
+				<source>style</source>
+			</trans-unit>
+			<trans-unit id="twitter.description">
+				<source>twitter</source>
+			</trans-unit>
+			<trans-unit id="facebook.description">
+				<source>facebook</source>
+			</trans-unit>
+			<trans-unit id="google.description">
+				<source>google</source>
+			</trans-unit>
+			<trans-unit id="youtube.description">
+				<source>youtube</source>
+			</trans-unit>
+			<trans-unit id="xing.description">
+				<source>xing</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

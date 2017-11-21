@@ -1,0 +1,76 @@
+
+plugin.tx_tp3social_tp3share {
+  view {
+    templateRootPaths.0 = EXT:tp3_social/Resources/Private/Templates/
+    templateRootPaths.1 = {$plugin.tx_tp3social_tp3share.view.templateRootPath}
+    partialRootPaths.0 = EXT:tp3_social/Resources/Private/Partials/
+    partialRootPaths.1 = {$plugin.tx_tp3social_tp3share.view.partialRootPath}
+    layoutRootPaths.0 = EXT:tp3_social/Resources/Private/Layouts/
+    layoutRootPaths.1 = {$plugin.tx_tp3social_tp3share.view.layoutRootPath}
+  }
+  persistence {
+    storagePid = {$plugin.tx_tp3social_tp3share.persistence.storagePid}
+    recursive = 1
+  }
+  features {
+    #skipDefaultArguments = 1
+  }
+  settings{
+	twitter 	= {$plugin.tx_tp3social_tp3share.settings.twitter}
+	facebook 	= {$plugin.tx_tp3social_tp3share.settings.facebook}
+	google 		= {$plugin.tx_tp3social_tp3share.settings.google}
+	meinvz 		= {$plugin.tx_tp3social_tp3share.settings.meinvz}
+	youtube 	= {$plugin.tx_tp3social_tp3share.settings.youtube}
+	xing		= {$plugin.tx_tp3social_tp3share.settings.xing}
+	linkedin	= {$plugin.tx_tp3social_tp3share.settings.linkedin}
+	tumblr		= {$plugin.tx_tp3social_tp3share.settings.tumblr}
+	vkontakte	= {$plugin.tx_tp3social_tp3share.settings.vkontakte}
+	flickr	= {$plugin.tx_tp3social_tp3share.settings.flickr}
+	twittername = {$plugin.tx_tp3social_tp3share.settings.twittername}
+	flickrname	= {$plugin.tx_tp3social_tp3share.settings.flickrname}
+	youtubename = {$plugin.tx_tp3social_tp3share.settings.youtubename}
+	BITusername = {$plugin.tx_tp3social_tp3share.settings.BITusername}
+	BITapi = {$plugin.tx_tp3social_tp3share.settings.BITapi}
+	googleid = {$plugin.tx_tp3social_tp3share.settings.googleid}
+	facebookid = {$plugin.tx_tp3social_tp3share.settings.facebookid}
+	layout = {$plugin.tx_tp3social_tp3share.settings.layout}
+	shortener = {$plugin.tx_tp3social_tp3share.settings.shortener}
+	sorting = {$plugin.tx_tp3social_tp3share.settings.sorting}
+	}
+  mvc {
+    callDefaultActionIfActionCantBeResolved = 1
+  }
+}
+
+plugin.tx_tp3social._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-tp3-social table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-tp3-social table th {
+        font-weight:bold;
+    }
+
+    .tx-tp3-social table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)
