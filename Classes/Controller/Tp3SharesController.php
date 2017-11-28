@@ -192,17 +192,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
          $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'"></script>');
          $googleplus_output = '<a class="st_socialnetwork_g_'.$this->settings["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
          }*/
-        if($this->settings["google"] == 1) {
-            $boxpos = 'vertical-bubble' ;
-            $googleshare_output = '<a class="g-plus" data-action="share" data-annotation="'.$boxpos.'"></a>';
-            $this->pageRenderer->addJsFooterInlineCode($this->extKey."_gg",'window.___gcfg = {lang: \''.$lang_short.'\'};
-    	 (function() {
-    	 var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
-    	 po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'&output=embed\';
-    	 var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
-    	 })();
-    	 ');
-        }
+
         //# - style11 and style 12
         if ($this->settings["layout"] == 'style11' || $this->settings["layout"] == 'style12' ) {
             $output = '';
@@ -260,6 +250,19 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $this->pageRenderer->addFooterData('<script type="text/javascript" src="http://t3n.de/aggregator/ebutton/'.$boxpos.'"></script>');
             }
 
+        }
+        else{
+            if($this->settings["google"] == 1) {
+                $boxpos = 'vertical-bubble' ;
+                $googleshare_output = '<a class="g-plus" data-action="share" data-annotation="'.$boxpos.'"></a>';
+                $this->pageRenderer->addJsFooterInlineCode($this->extKey."_gg",'window.___gcfg = {lang: \''.$lang_short.'\'};
+    	 (function() {
+    	 var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
+    	 po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'&output=embed\';
+    	 var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
+    	 })();
+    	 ');
+            }
         }
 
         $sorting = $sorting ? $sorting : 'twitter, facebook, meinvz, youtube, tumblr, vkontakte, flickr, googleplus, googleshare, xing, linkedin, t3n';
