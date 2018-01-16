@@ -17,7 +17,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_tp3social_domain_model_tp3shares');
          // $TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_pi1'] ='pi_flexform';
         
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($_EXTKEY.'_pi1', 'FILE:EXT:'.$_EXTKEY . '/Configuration/FlexForms/flexform.xml');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($extKey.'_pi1', 'FILE:EXT:'.$extKey . '/Configuration/FlexForms/flexform.xml');
     },
     $_EXTKEY
 );

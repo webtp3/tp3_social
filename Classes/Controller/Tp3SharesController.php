@@ -254,7 +254,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         else{
             if($this->settings["google"] == 1) {
                 $boxpos = 'vertical-bubble' ;
-                $googleshare_output = '<a class="g-plus" data-action="share" data-annotation="'.$boxpos.'"></a>';
+                $googleshare_output = '<div class="g-follow" data-action="share" data-annotation="'.$boxpos.'"></div>';
                 $this->pageRenderer->addJsFooterInlineCode($this->extKey."_gg",'window.___gcfg = {lang: \''.$lang_short.'\'};
     	 (function() {
     	 var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
