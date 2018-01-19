@@ -97,8 +97,8 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->pageRenderer->addCssFile('typo3conf/ext/tp3_social/Resources/Public/Css/'.$this->settings["layout"].'/style.css');
 
         //$this->response->addAdditionalHeaderData('<link href="'.\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath( $this->extKey ).'Resources/Public/Css/'.$this->settings["layout"].'/style.css" rel="stylesheet" type="text/css" />');
-
-
+        $youtube =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['youtube'];
+        if($youtube == 1)$youtubename =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['youtubename'];
         # - username error
         if($youtube == 1 && $youtubename == '') $error .= $this->gettranslation('error_youtubename').'<br />';
 
