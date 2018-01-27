@@ -83,7 +83,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $output = '';
         $error	= '';
 
-        $vars = 'twitter,facebook,google,meinvz,youtube,xing,linkedin,tumblr,vkontakte,flickr,googleshare,t3n,twittername,youtubename,flickrname,BITusername,BITapi,layout,shortener,sorting,facebookid,googleid';
+        $vars = 'twitter,facebook,google,meinvz,youtube,xing,linkedin,tumblr,vkontakte,flickr,googleshare,t3n,twittername,youtubename,facebookname,googlename,flickrname,BITusername,BITapi,layout,shortener,sorting,facebookid,googleid';
         foreach (explode(',', $vars) as $value) $$value = ($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value]) ? $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value] : $this->cObj->data['pi_flexform']['data']['sDEF']['lDEF'][$value]['vDEF'] ;
         $pagetitle 		= $GLOBALS['TSFE']->page['subtitle'] ? $GLOBALS['TSFE']->page['subtitle']: $GLOBALS['TSFE']->page['title'];
         $realurl 		= 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
@@ -135,7 +135,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         #- facebook
         if($this->settings["facebook"] == 1 && in_array($this->settings["layout"], explode(',', $facebook_button))) {
-            $facebooklink = 'https://www.facebook.com/sharer.php?u='.urlencode($theurl);
+            $facebooklink = 'https://www.facebook.com/feed.php?app_id='.$this->settings["facebookid"].'&display=popup&caption='.urlencode($pagetitle).'&link='.urlencode($theurl).'&redirect_uri=https://www.facebook.com'.$this->settings["facebookname"];
             $facebook_output = '<a title="Facebook" class="facebook '.$this->settings["layout"].'" target="_blank" href="'.$facebooklink.'">Facebook</a>';
             $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'(function(d, s, id) {
 				  var js, fjs = d.getElementsByTagName(s)[0];

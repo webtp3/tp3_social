@@ -7,7 +7,7 @@ plugin.tx_tp3social_tp3share {
     partialRootPath = EXT:tp3_social/Resources/Private/Partials/
     # cat=plugin.tx_tp3social_tp3share/file; type=string; label=Path to template layouts (FE)
     layoutRootPath = EXT:tp3_social/Resources/Private/Layouts/
-  }
+     }
   persistence {
     # cat=plugin.tx_tp3social_tp3share//a; type=string; label=Default storage PID
     storagePid =
@@ -38,7 +38,11 @@ plugin.tx_tp3social_tp3share {
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=flickrname
 		flickrname	= LINK TO FLICKR PHOTOSTREAM
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=youtubename
-		youtubename = thomasruta
+        youtubename = thomasruta
+		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=facebookname
+        facebookname = thomasruta
+		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=googlename
+        googlename = thomasruta
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=BITusername
 		BITusername = thomnasruta
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=BITapi

@@ -29,6 +29,8 @@ plugin.tx_tp3social_tp3share {
 	twittername = {$plugin.tx_tp3social_tp3share.settings.twittername}
 	flickrname	= {$plugin.tx_tp3social_tp3share.settings.flickrname}
 	youtubename = {$plugin.tx_tp3social_tp3share.settings.youtubename}
+    facebookname = {$plugin.tx_tp3social_tp3share.settings.facebookname}
+    googlename = {$plugin.tx_tp3social_tp3share.settings.googlename}
 	BITusername = {$plugin.tx_tp3social_tp3share.settings.BITusername}
 	BITapi = {$plugin.tx_tp3social_tp3share.settings.BITapi}
 	googleid = {$plugin.tx_tp3social_tp3share.settings.googleid}
