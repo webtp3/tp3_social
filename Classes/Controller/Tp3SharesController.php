@@ -303,10 +303,11 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->settings["layout"] = $this->settings["layout"] ? $this->settings["layout"] : "style05";
         //$this->settings["layout"] = $cObj['data']['sDEF']['lDEF']['layout']['vDEF'] ?  $cObj['data']['sDEF']['lDEF']['layout']['vDEF'] : $this->settings["layout"];
         //override settings from flexform
-        $keys = array_keys ($cObj['data']['sDEF']['lDEF']);
-        foreach($keys as $key){
-            $this->settings[$key] = $cObj['data']['sDEF']['lDEF'][$key]['vDEF'] ?  $cObj['data']['sDEF']['lDEF'][$key]['vDEF'] : $this->settings[$key];
-        }
+        if(is_array($cObj['data']['sDEF']['lDEF']))$keys = array_keys ($cObj['data']['sDEF']['lDEF']);
+        if(is_array($keys))
+            foreach($keys as $key){
+                $this->settings[$key] = $cObj['data']['sDEF']['lDEF'][$key]['vDEF'] ?  $cObj['data']['sDEF']['lDEF'][$key]['vDEF'] : $this->settings[$key];
+            }
         $this->cObjRenderer =$this->objectManager->get('TYPO3\\CMS\\Frontend\\ContentObject\\ContentObjectRenderer');
 
         $this->pageRenderer =  $this->objectManager->get('TYPO3\\CMS\\Core\\Page\\PageRenderer');
