@@ -87,13 +87,17 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         foreach (explode(',', $vars) as $value) $$value = ($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value]) ? $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value] : $this->cObj->data['pi_flexform']['data']['sDEF']['lDEF'][$value]['vDEF'] ;
         $pagetitle 		= $GLOBALS['TSFE']->page['subtitle'] ? $GLOBALS['TSFE']->page['subtitle']: $GLOBALS['TSFE']->page['title'];
         $realurl 		= 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-
+        $sorting =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['sorting'];
         # - bitly
-        if($shortener == 'bitly') {
+        $shortener =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['shortener'];
+
+      /*  if($shortener == 'bitly') {
+            $BITusername =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['BITusername'];
+             $BITapi =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['BITapi'];
             $error .= (!$BITusername || $BITusername == '') ? $this->gettranslation('error_bit_username').'<br />' : '' ;
             $error .= (!$BITapi || $BITapi == '') 			? $this->gettranslation('error_bit_api').'<br />' 		: '' ;
             if($error == '') $biturl =  $this->make_bitly_url($realurl,$BITusername,$BITapi,'json');
-        }
+        }*/
         $this->pageRenderer->addCssFile('typo3conf/ext/tp3_social/Resources/Public/Css/'.$this->settings["layout"].'/style.css');
 
         //$this->response->addAdditionalHeaderData('<link href="'.\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath( $this->extKey ).'Resources/Public/Css/'.$this->settings["layout"].'/style.css" rel="stylesheet" type="text/css" />');
@@ -124,7 +128,9 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         # - twitter
         if($this->settings["twitter"] == 1 && in_array($this->settings["layout"], explode(',', $twitter_button))) {
+            $twittername = $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['twittername'];
             $thelenght = 140-strlen($twittername)-35;
+
             $parameters= $thelenght.'|...|true';
             $posttitle = $this->cObjRenderer->crop($pagetitle,$parameters);
             $twitterlink =  'https://twitter.com/share?original_referer='.$theurl.'&text='.urlencode($posttitle.' @'.$twittername);
@@ -187,11 +193,11 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         if($this->settings["flickr"] == 1 && in_array($this->settings["layout"], explode(',', $flickr_button))) {
             $flickr_output = '<a title="Flickr" class="flickr '.$this->settings["layout"].'" target="_blank" href="'.$flickrname.'">Flickr</a>';
         }
-        /*if($this->settings["google"] == 1) {
+        if($this->settings["google"] == 1) {
          $boxpos = 'medium';
          $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'"></script>');
          $googleplus_output = '<a class="st_socialnetwork_g_'.$this->settings["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
-         }*/
+         }
 
         //# - style11 and style 12
         if ($this->settings["layout"] == 'style11' || $this->settings["layout"] == 'style12' ) {
@@ -234,7 +240,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $linkedin_output = '';
             }
 
-            if($this->settings["googleshare"] == 1) {
+          /*  if($this->settings["googleshare"] == 1) {
                 $boxpos = ($this->settings["layout"] == 'style11') ? 'bubble' : 'vertical-bubble' ;
                 $googleshare_output = '<div class="g-plus" data-action="share" data-annotation="'.$boxpos.'"></div>';
                 $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'window.___gcfg = {lang: \''.$lang_short.'\'};
@@ -243,7 +249,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 		    		 po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'&output=embed\';
 		    		 var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
 		    		 })();');
-            }
+            }*/
 
             if($this->settings["t3n"] == 1) {
                 $boxpos = ($this->settings["layout"] == 'style11') ? '' : '?count=vertical' ;
@@ -252,7 +258,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         }
         else{
-            if($this->settings["google"] == 1) {
+           /* if($this->settings["google"] == 1) {
                 $boxpos = 'vertical-bubble' ;
                 $googleshare_output = '<div class="g-follow" data-action="share" data-annotation="'.$boxpos.'"></div>';
                 $this->pageRenderer->addJsFooterInlineCode($this->extKey."_gg",'window.___gcfg = {lang: \''.$lang_short.'\'};
@@ -262,6 +268,11 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     	 var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
     	 })();
     	 ');
+            }*/
+            if($this->settings["google"] == 1) {
+                $boxpos = 'vertical-bubble' ;
+                $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'">{lang: \''.$lang_short.'\'}</script>');
+                $googleplus_output = '<div class="st_socialnetwork_g_'.$this->settings["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
             }
         }
 

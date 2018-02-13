@@ -81,7 +81,7 @@ class Tp3ShareRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 		 
 		#- facebook
 		if($facebook == 1 && in_array($layout, explode(',', $facebook_button))) {
-            $facebooklink = 'https://www.facebook.com/feed.php?app_id='.$this->settings["facebookid"].'&display=popup&caption='.urlencode($pagetitle).'&link='.urlencode($theurl).'&redirect_uri=https://www.facebook.com'.$this->settings["facebookname"];
+			$facebooklink = 'https://www.facebook.com/sharer.php?u='.urlencode($theurl);
 			$facebook_output = '<a title="Facebook" class="facebook '.$layout.'" target="_blank" href="'.$facebooklink.'">Facebook</a>';
 		}
 		 
