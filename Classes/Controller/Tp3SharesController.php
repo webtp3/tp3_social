@@ -86,18 +86,19 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $vars = 'twitter,facebook,google,meinvz,youtube,xing,linkedin,tumblr,vkontakte,flickr,googleshare,t3n,twittername,youtubename,facebookname,googlename,flickrname,BITusername,BITapi,layout,shortener,sorting,facebookid,googleid';
         foreach (explode(',', $vars) as $value) $$value = ($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value]) ? $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value] : $this->cObj->data['pi_flexform']['data']['sDEF']['lDEF'][$value]['vDEF'] ;
         $pagetitle 		= $GLOBALS['TSFE']->page['subtitle'] ? $GLOBALS['TSFE']->page['subtitle']: $GLOBALS['TSFE']->page['title'];
+
         $realurl 		= 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
         $sorting =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['sorting'];
         # - bitly
         $shortener =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['shortener'];
 
-      /*  if($shortener == 'bitly') {
-            $BITusername =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['BITusername'];
-             $BITapi =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['BITapi'];
-            $error .= (!$BITusername || $BITusername == '') ? $this->gettranslation('error_bit_username').'<br />' : '' ;
-            $error .= (!$BITapi || $BITapi == '') 			? $this->gettranslation('error_bit_api').'<br />' 		: '' ;
-            if($error == '') $biturl =  $this->make_bitly_url($realurl,$BITusername,$BITapi,'json');
-        }*/
+        /*  if($shortener == 'bitly') {
+              $BITusername =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['BITusername'];
+               $BITapi =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['BITapi'];
+              $error .= (!$BITusername || $BITusername == '') ? $this->gettranslation('error_bit_username').'<br />' : '' ;
+              $error .= (!$BITapi || $BITapi == '') 			? $this->gettranslation('error_bit_api').'<br />' 		: '' ;
+              if($error == '') $biturl =  $this->make_bitly_url($realurl,$BITusername,$BITapi,'json');
+          }*/
         $this->pageRenderer->addCssFile('typo3conf/ext/tp3_social/Resources/Public/Css/'.$this->settings["layout"].'/style.css');
 
         //$this->response->addAdditionalHeaderData('<link href="'.\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath( $this->extKey ).'Resources/Public/Css/'.$this->settings["layout"].'/style.css" rel="stylesheet" type="text/css" />');
@@ -113,7 +114,8 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         # - error return
         if($error !='') return $error;
 
-        $theurl = ($shortener == 'bitly') ? $biturl : $realurl ;
+        // $theurl = ($shortener == 'bitly') ? $biturl : $realurl ;
+        $theurl = $realurl;
 
         # - buttons to layout
         $twitter_button 	= 'style01,style02,style03,style04,style05,style06,style07,style08,style09,style10,style13,style14';
@@ -141,7 +143,8 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         #- facebook
         if($this->settings["facebook"] == 1 && in_array($this->settings["layout"], explode(',', $facebook_button))) {
-            $facebooklink = 'https://www.facebook.com/feed.php?app_id='.$this->settings["facebookid"].'&display=popup&caption='.urlencode($pagetitle).'&link='.urlencode($theurl).'&redirect_uri=https://www.facebook.com'.$this->settings["facebookname"];
+            //   $facebooklink = 'https://www.facebook.com/feed.php?app_id='.$this->settings["facebookid"].'&display=popup&caption='.urlencode($pagetitle).'&link='.$theurl.'&redirect_uri=https://www.facebook.com/'.$this->settings["facebookname"];
+            $facebooklink = 'https://www.facebook.com/sharer.php?u='.urlencode($theurl);
             $facebook_output = '<a title="Facebook" class="facebook '.$this->settings["layout"].'" target="_blank" href="'.$facebooklink.'">Facebook</a>';
             $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'(function(d, s, id) {
 				  var js, fjs = d.getElementsByTagName(s)[0];
@@ -194,10 +197,10 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             $flickr_output = '<a title="Flickr" class="flickr '.$this->settings["layout"].'" target="_blank" href="'.$flickrname.'">Flickr</a>';
         }
         if($this->settings["google"] == 1) {
-         $boxpos = 'medium';
-         $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'"></script>');
-         $googleplus_output = '<a class="st_socialnetwork_g_'.$this->settings["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
-         }
+            $boxpos = 'medium';
+            $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'"></script>');
+            $googleplus_output = '<a class="st_socialnetwork_g_'.$this->settings["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
+        }
 
         //# - style11 and style 12
         if ($this->settings["layout"] == 'style11' || $this->settings["layout"] == 'style12' ) {
@@ -240,16 +243,16 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $linkedin_output = '';
             }
 
-          /*  if($this->settings["googleshare"] == 1) {
-                $boxpos = ($this->settings["layout"] == 'style11') ? 'bubble' : 'vertical-bubble' ;
-                $googleshare_output = '<div class="g-plus" data-action="share" data-annotation="'.$boxpos.'"></div>';
-                $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'window.___gcfg = {lang: \''.$lang_short.'\'};
-		    		 (function() {
-		    		 var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
-		    		 po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'&output=embed\';
-		    		 var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
-		    		 })();');
-            }*/
+            /*  if($this->settings["googleshare"] == 1) {
+                  $boxpos = ($this->settings["layout"] == 'style11') ? 'bubble' : 'vertical-bubble' ;
+                  $googleshare_output = '<div class="g-plus" data-action="share" data-annotation="'.$boxpos.'"></div>';
+                  $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'window.___gcfg = {lang: \''.$lang_short.'\'};
+                       (function() {
+                       var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
+                       po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'&output=embed\';
+                       var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
+                       })();');
+              }*/
 
             if($this->settings["t3n"] == 1) {
                 $boxpos = ($this->settings["layout"] == 'style11') ? '' : '?count=vertical' ;
@@ -258,17 +261,17 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         }
         else{
-           /* if($this->settings["google"] == 1) {
-                $boxpos = 'vertical-bubble' ;
-                $googleshare_output = '<div class="g-follow" data-action="share" data-annotation="'.$boxpos.'"></div>';
-                $this->pageRenderer->addJsFooterInlineCode($this->extKey."_gg",'window.___gcfg = {lang: \''.$lang_short.'\'};
-    	 (function() {
-    	 var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
-    	 po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'&output=embed\';
-    	 var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
-    	 })();
-    	 ');
-            }*/
+            /* if($this->settings["google"] == 1) {
+                 $boxpos = 'vertical-bubble' ;
+                 $googleshare_output = '<div class="g-follow" data-action="share" data-annotation="'.$boxpos.'"></div>';
+                 $this->pageRenderer->addJsFooterInlineCode($this->extKey."_gg",'window.___gcfg = {lang: \''.$lang_short.'\'};
+          (function() {
+          var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
+          po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'&output=embed\';
+          var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
+          })();
+          ');
+             }*/
             if($this->settings["google"] == 1) {
                 $boxpos = 'vertical-bubble' ;
                 $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->settings["googleid"].'">{lang: \''.$lang_short.'\'}</script>');

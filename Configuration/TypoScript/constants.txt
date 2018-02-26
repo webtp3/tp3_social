@@ -19,8 +19,10 @@ plugin.tx_tp3social_tp3share {
 		facebook 	= 1
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=google
 		google 		= 1
+	  	# cat=plugin.tx_tp3social_tp3share//a; type=string; label=googleshare
+	    googleshare = 0
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=meinvz
-		meinvz 		= 1
+		meinvz 		= 0
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=youtube
 		youtube 	= 1
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=xing
@@ -34,21 +36,21 @@ plugin.tx_tp3social_tp3share {
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=flickr
 		flickr	= 0
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=twittername
-		twittername = thomasruta
+		twittername = {$twittername}
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=flickrname
 		flickrname	= LINK TO FLICKR PHOTOSTREAM
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=youtubename
-        youtubename = thomasruta
+        youtubename = {$youtubename}
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=facebookname
-        facebookname = thomasruta
+        facebookname = {$facebookname}
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=googlename
-        googlename = thomasruta
+        googlename = {$googlename}
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=BITusername
 		BITusername = thomnasruta
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=BITapi
 		BITapi = R_666437839bbce9a5044fde7b4d39d2ff
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=layout
-		layout = style11
+		layout = style5
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=googleid
 		googleid ={$google_publisher}
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=googleid

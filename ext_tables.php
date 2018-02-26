@@ -11,7 +11,6 @@ call_user_func(
             'tp3 Shares'
         );
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'tp3 social');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_tp3social_domain_model_tp3shares', 'EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_tp3social_domain_model_tp3shares');
