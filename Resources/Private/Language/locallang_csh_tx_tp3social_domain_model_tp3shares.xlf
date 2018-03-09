@@ -27,6 +27,12 @@
 			<trans-unit id="xing.description">
 				<source>xing</source>
 			</trans-unit>
+            <trans-unit id="tx_tp3_social_tp3facebook">
+                <source>tp3 Facebook</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3_social_tp3facebook.description">
+                <source>Show Facebook Page from tp3mods Settings</source>
+            </trans-unit>
 
             <trans-unit id="tt_content.pi_flexform.layout">
                 <source>Style</source>
@@ -139,6 +145,235 @@
             <trans-unit id="tt_content.pi_flexform.sorting">
                 <source>Sortierung (Komma getrennt)</source>
             </trans-unit>
+	<trans-unit id="facebookname.description">
+				<source>facebookname</source>
+			</trans-unit>
+			<trans-unit id="fbappid.description">
+				<source>fbappid</source>
+			</trans-unit>
+			<trans-unit id="options.description">
+				<source>options</source>
+			</trans-unit>
+        <trans-unit id="tt_content.pi_flexform.sheet.general">
+                <source>General</source>
+                </trans-unit>
+
+                <trans-unit id="tt_content.pi_flexform.field.type">
+                <source>Social Plugin</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.activity_feed">
+                <source>Activity Feed</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.comments">
+                <source>Comments</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.facepile">
+                <source>Facepile</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.like_button">
+                <source>Like Button</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.like_box">
+                <source>Like Box</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.live_stream">
+                <source>Live Stream</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.login_button">
+                <source>Login Button</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.recommendations">
+                <source>Recommendations</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.send_button">
+                <source>Send Button</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.subscribe_button">
+                <source>Follow Button</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.share_button">
+                <source>Share Button</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.type.embedded">
+                <source>Embedded Post</source>
+                </trans-unit>
+
+                <trans-unit id="tt_content.pi_flexform.field.show_in_iframe">
+                <source>Show in iFrame (Not recommended!)</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.manual">
+                <source>Manual</source>
+                </trans-unit>
+
+                <trans-unit id="tt_content.pi_flexform.field.domain">
+                <source>Domain</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.width">
+                <source>Width</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.height">
+                <source>Height</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.publish_feed">
+                <source>Publish Feed</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.show_header">
+                <source>Show header</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.color_scheme">
+                <source>Color scheme</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.color_scheme.light">
+                <source>Light</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.color_scheme.dark">
+                <source>Dark</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.font">
+                <source>Font</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.font.arial">
+                <source>Arial</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.font.lucida_grande">
+                <source>Lucida Grande</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.font.segoe_ui">
+                <source>Segoe UI</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.font.tahoma">
+                <source>Tahoma</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.font.trebuchet_ms">
+                <source>Trebuchet MS</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.font.verdana">
+                <source>Verdana</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.border_color">
+                <source>Border color</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.show_recommendations">
+                <source>Show recommendations</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.unique_id">
+                <source>Unique ID</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.noc">
+                <source>Number of Comments</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.url_like">
+                <source>URL to like</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.profile_url">
+                <source>Profile URL</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.url_post">
+                <source>URL of Post</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.layout_style">
+                <source>Layout style</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.show_faces">
+                <source>Show faces</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.verb_display">
+                <source>Verb to display</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.verb_display.like">
+                <source>Like</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.verb_display.recommend">
+                <source>Recommend</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.fb_page_id">
+                <source>Facebook page ID</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.show_stream">
+                <source>Show stream</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.app_id">
+                <source>App ID</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.xid">
+                <source>XID</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.max_rows">
+                <source>Max rows</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.num_rows">
+                <source>Number of rows</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.attr_url">
+                <source>Attribution URL (From)</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.post_to_friends">
+                <source>Always post to friends</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.page_url">
+                <source>Facebook Page URL</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.connections">
+                <source>Connections</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.url">
+                <source>URL</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.send">
+                <source>Send</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.share">
+                <source>Share</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.size">
+                <source>Size</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.size.small">
+                <source>Small</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.size.large">
+                <source>Large</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.facebook_url">
+                <source>Facebook URL</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.css">
+                <source>CSS url (http://www.test.com/test_css.css)</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.profile_id">
+                <source>Profile ID (Check with: https://graph.facebook.com/your.username)</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.show_logobar">
+                <source>Show logobar</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.tt_news">
+                <source>tt_news compatibility</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.show_border">
+                <source>Show border</source>
+                </trans-unit>
+
+                <trans-unit id="tt_content.pi_flexform.field.og_label">
+                <source>Open Graph - Manual</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.og_title">
+                <source>Open Graph - Title</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.og_type">
+                <source>Open Graph - Type</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.og_url">
+                <source>Open Graph - URL</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.og_image_url">
+                <source>Open Graph - Image URL</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.og_sitename">
+                <source>Open Graph - Sitename</source>
+                </trans-unit>
+                <trans-unit id="tt_content.pi_flexform.field.og_description">
+                <source>Open Graph - Description</source>
+                </trans-unit>
 		</body>
 	</file>
 </xliff>

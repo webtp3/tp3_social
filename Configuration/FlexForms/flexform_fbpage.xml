@@ -1,0 +1,1443 @@
+<T3DataStructure>
+	<meta TYPE="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets type="array">
+		<sDEF type="array">
+			<ROOT type="array">
+				<TCEforms type="array">
+					<sheetTitle>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.sheet.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+					<type_form>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.activity_feed</numIndex>
+										<numIndex index="1">activity_feed</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.comments</numIndex>
+										<numIndex index="1">comments</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.facepile</numIndex>
+										<numIndex index="1">facepile</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.like_button</numIndex>
+										<numIndex index="1">like_button</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.like_box</numIndex>
+										<numIndex index="1">like_box</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.recommendations</numIndex>
+										<numIndex index="1">recommendations</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.send_button</numIndex>
+										<numIndex index="1">send_button</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.subscribe_button</numIndex>
+										<numIndex index="1">subscribe_button</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.share_button</numIndex>
+										<numIndex index="1">fan_box</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.type.embedded</numIndex>
+										<numIndex index="1">embedded</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</type_form>
+
+
+
+
+					<!-- Activity Feed - Begin -->
+					<a_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/activity/</default>
+							</config>
+						</TCEforms>
+					</a_doku>
+
+					<a_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_in_iframe</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</a_show_in_iframe>
+
+					<a_domain>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.domain</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</a_domain>
+
+					<a_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</a_width>
+
+					<a_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.height</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</a_height>
+
+					<a_show_header type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_header</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</a_show_header>
+
+					<a_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</a_color_scheme>
+
+					<a_font>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</a_font>
+
+					<a_border type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.border_color</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config type="array">
+								<size>7</size>
+								<max>7</max>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</a_border>
+
+					<a_show_recommendations type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_recommendations</label>
+							<displayCond>FIELD:type_form:=:activity_feed</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</a_show_recommendations>
+					<!-- Activity Feed - End -->
+
+
+
+
+
+					<!-- Comments - Begin -->
+					<b_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:comments</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/comments/</default>
+							</config>
+						</TCEforms>
+					</b_doku>
+
+					<b_tt_news>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.tt_news</label>
+							<displayCond>FIELD:type_form:=:comments</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</b_tt_news>
+
+					<b_number type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.noc</label>
+							<displayCond>FIELD:type_form:=:comments</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>10</default>
+							</config>
+						</TCEforms>
+					</b_number>
+
+					<b_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:comments</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>450</default>
+							</config>
+						</TCEforms>
+					</b_width>
+
+					<b_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:comments</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</b_color_scheme>
+					<!-- Comments - End -->
+
+
+
+
+
+					<!-- Facepile - Begin -->
+					<c_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:facepile</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/facepile/</default>
+							</config>
+						</TCEforms>
+					</c_doku>
+
+					<c_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_in_iframe</label>
+							<displayCond>FIELD:type_form:=:facepile</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</c_show_in_iframe>
+
+					<c_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.url</label>
+							<displayCond>FIELD:type_form:=:facepile</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</c_url>
+
+					<c_size>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.size</label>
+							<displayCond>FIELD:type_form:=:facepile</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.size.small</numIndex>
+										<numIndex index="1">small</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.size.large</numIndex>
+										<numIndex index="1">large</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</c_size>
+
+					<c_num_rows type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.num_rows</label>
+							<displayCond>FIELD:type_form:=:facepile</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<type>input</type>
+								<eval>required,int</eval>
+								<default>10</default>
+							</config>
+						</TCEforms>
+					</c_num_rows>
+
+					<c_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:facepile</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>200</default>
+							</config>
+						</TCEforms>
+					</c_width>
+
+					<c_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:facepile</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</c_color_scheme>
+					<!-- Facepile - End -->
+
+
+
+
+
+					<!-- Like Button - Begin -->
+					<d_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/like/</default>
+							</config>
+						</TCEforms>
+					</d_doku>
+
+					<d_tt_news>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.tt_news</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</d_tt_news>
+
+					<d_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_in_iframe</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</d_show_in_iframe>
+
+					<d_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.url_like</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</d_url>
+
+					<d_layout_style>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.layout_style</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Standard</numIndex>
+										<numIndex index="1">standard</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">Button count</numIndex>
+										<numIndex index="1">button_count</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">Box count</numIndex>
+										<numIndex index="1">box_count</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</d_layout_style>
+
+					<d_share type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.share</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</d_share>
+
+					<d_show_faces type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_faces</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</d_show_faces>
+
+					<d_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>450</default>
+							</config>
+						</TCEforms>
+					</d_width>
+
+					<d_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.height</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>100</default>
+							</config>
+						</TCEforms>
+					</d_height>
+
+					<d_verb>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.verb_display</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.verb_display.like</numIndex>
+										<numIndex index="1">like</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.verb_display.recommend</numIndex>
+										<numIndex index="1">recommend</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</d_verb>
+
+					<d_font>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</d_font>
+
+					<d_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</d_color_scheme>
+
+					<!-- Open Graph options -->
+					<d_og_label>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.og_label</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/opengraph/</default>
+							</config>
+						</TCEforms>
+					</d_og_label>
+
+					<d_og_title>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.og_title</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</d_og_title>
+
+					<d_og_type>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.og_type</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array"><numIndex index="0"></numIndex><numIndex index="1">0</numIndex></numIndex>
+									<numIndex index="1" type="array"><numIndex index="0">activity</numIndex><numIndex index="1">activity</numIndex></numIndex>
+									<numIndex index="2" type="array"><numIndex index="0">sport</numIndex><numIndex index="1">sport</numIndex></numIndex>
+									<numIndex index="3" type="array"><numIndex index="0">bar</numIndex><numIndex index="1">bar</numIndex></numIndex>
+									<numIndex index="4" type="array"><numIndex index="0">company</numIndex><numIndex index="1">company</numIndex></numIndex>
+									<numIndex index="5" type="array"><numIndex index="0">cafe</numIndex><numIndex index="1">cafe</numIndex></numIndex>
+									<numIndex index="6" type="array"><numIndex index="0">hotel</numIndex><numIndex index="1">hotel</numIndex></numIndex>
+									<numIndex index="7" type="array"><numIndex index="0">restaurant</numIndex><numIndex index="1">restaurant</numIndex></numIndex>
+									<numIndex index="8" type="array"><numIndex index="0">cause</numIndex><numIndex index="1">cause</numIndex></numIndex>
+									<numIndex index="9" type="array"><numIndex index="0">sports_league</numIndex><numIndex index="1">sports_league</numIndex></numIndex>
+									<numIndex index="10" type="array"><numIndex index="0">sports_team</numIndex><numIndex index="1">sports_team</numIndex></numIndex>
+									<numIndex index="11" type="array"><numIndex index="0">band</numIndex><numIndex index="1">band</numIndex></numIndex>
+									<numIndex index="12" type="array"><numIndex index="0">government</numIndex><numIndex index="1">government</numIndex></numIndex>
+									<numIndex index="13" type="array"><numIndex index="0">non_profit</numIndex><numIndex index="1">non_profit</numIndex></numIndex>
+									<numIndex index="14" type="array"><numIndex index="0">school</numIndex><numIndex index="1">school</numIndex></numIndex>
+									<numIndex index="15" type="array"><numIndex index="0">university</numIndex><numIndex index="1">university</numIndex></numIndex>
+									<numIndex index="16" type="array"><numIndex index="0">actor</numIndex><numIndex index="1">actor</numIndex></numIndex>
+									<numIndex index="17" type="array"><numIndex index="0">athlete</numIndex><numIndex index="1">athlete</numIndex></numIndex>
+									<numIndex index="18" type="array"><numIndex index="0">author</numIndex><numIndex index="1">author</numIndex></numIndex>
+									<numIndex index="19" type="array"><numIndex index="0">director</numIndex><numIndex index="1">director</numIndex></numIndex>
+									<numIndex index="20" type="array"><numIndex index="0">musician</numIndex><numIndex index="1">musician</numIndex></numIndex>
+									<numIndex index="21" type="array"><numIndex index="0">politician</numIndex><numIndex index="1">politician</numIndex></numIndex>
+									<numIndex index="22" type="array"><numIndex index="0">public_figure</numIndex><numIndex index="1">public_figure</numIndex></numIndex>
+									<numIndex index="23" type="array"><numIndex index="0">city</numIndex><numIndex index="1">city</numIndex></numIndex>
+									<numIndex index="24" type="array"><numIndex index="0">country</numIndex><numIndex index="1">country</numIndex></numIndex>
+									<numIndex index="25" type="array"><numIndex index="0">landmark</numIndex><numIndex index="1">landmark</numIndex></numIndex>
+									<numIndex index="26" type="array"><numIndex index="0">state_province</numIndex><numIndex index="1">state_province</numIndex></numIndex>
+									<numIndex index="27" type="array"><numIndex index="0">album</numIndex><numIndex index="1">album</numIndex></numIndex>
+									<numIndex index="28" type="array"><numIndex index="0">book</numIndex><numIndex index="1">book</numIndex></numIndex>
+									<numIndex index="29" type="array"><numIndex index="0">drink</numIndex><numIndex index="1">drink</numIndex></numIndex>
+									<numIndex index="30" type="array"><numIndex index="0">food</numIndex><numIndex index="1">food</numIndex></numIndex>
+									<numIndex index="31" type="array"><numIndex index="0">game</numIndex><numIndex index="1">game</numIndex></numIndex>
+									<numIndex index="32" type="array"><numIndex index="0">product</numIndex><numIndex index="1">product</numIndex></numIndex>
+									<numIndex index="33" type="array"><numIndex index="0">song</numIndex><numIndex index="1">song</numIndex></numIndex>
+									<numIndex index="34" type="array"><numIndex index="0">movie</numIndex><numIndex index="1">movie</numIndex></numIndex>
+									<numIndex index="35" type="array"><numIndex index="0">tv_show</numIndex><numIndex index="1">tv_show</numIndex></numIndex>
+									<numIndex index="36" type="array"><numIndex index="0">blog</numIndex><numIndex index="1">blog</numIndex></numIndex>
+									<numIndex index="37" type="array"><numIndex index="0">website</numIndex><numIndex index="1">website</numIndex></numIndex>
+									<numIndex index="38" type="array"><numIndex index="0">article</numIndex><numIndex index="1">article</numIndex></numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</d_og_type>
+
+					<d_og_description>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.og_description</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<type>text</type>
+								<size>10</size>
+								<rows>5</rows>
+							</config>
+						</TCEforms>
+					</d_og_description>
+
+					<d_og_sitename>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.og_sitename</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</d_og_sitename>
+
+					<d_og_url>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.og_url</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</d_og_url>
+
+					<d_og_image_url>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.og_image_url</label>
+							<displayCond>FIELD:type_form:=:like_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</d_og_image_url>
+					<!-- Like Button - End -->
+
+
+
+
+
+					<!-- Like Box - Begin -->
+					<e_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/like-box/</default>
+							</config>
+						</TCEforms>
+					</e_doku>
+
+					<e_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_in_iframe</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</e_show_in_iframe>
+
+					<e_page_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.page_url</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</e_page_url>
+
+					<e_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>292</default>
+							</config>
+						</TCEforms>
+					</e_width>
+
+					<e_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.height</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>300</default>
+							</config>
+						</TCEforms>
+					</e_height>
+
+					<e_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</e_color_scheme>
+
+					<e_show_faces type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_faces</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</e_show_faces>
+
+					<e_show_stream type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_stream</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</e_show_stream>
+
+					<e_show_header type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_header</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</e_show_header>
+
+					<e_show_border type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_border</label>
+							<displayCond>FIELD:type_form:=:like_box</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</e_show_border>
+					<!-- Like Box - End -->
+
+
+
+
+
+					<!-- Recommendations - Begin -->
+					<h_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/recommendations/</default>
+							</config>
+						</TCEforms>
+					</h_doku>
+
+					<h_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_in_iframe</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</h_show_in_iframe>
+
+					<h_domain>
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.domain</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config type="array">
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</h_domain>
+
+					<h_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</h_width>
+
+					<h_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.height</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<default>300</default>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</h_height>
+
+					<h_show_header type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_header</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</h_show_header>
+
+					<h_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</h_color_scheme>
+
+					<h_font>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</h_font>
+
+					<h_border type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.border_color</label>
+							<displayCond>FIELD:type_form:=:recommendations</displayCond>
+							<config type="array">
+								<size>7</size>
+								<max>7</max>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</h_border>
+					<!-- Recommendations - End -->
+
+
+
+
+
+					<!-- Send Button - Begin -->
+					<i_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:send_button</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/send/</default>
+							</config>
+						</TCEforms>
+					</i_doku>
+
+					<i_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.url</label>
+							<displayCond>FIELD:type_form:=:send_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</i_url>
+
+					<i_font>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font</label>
+							<displayCond>FIELD:type_form:=:send_button</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</i_font>
+
+					<i_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:send_button</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</i_color_scheme>
+					<!-- Send Button - End -->
+
+					<!-- Subscribe Button - Begin -->
+					<j_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/reference/plugins/subscribe/</default>
+							</config>
+						</TCEforms>
+					</j_doku>
+
+					<j_show_in_iframe>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_in_iframe</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</j_show_in_iframe>
+
+					<j_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.profile_url</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</j_url>
+
+					<j_layout_style>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.layout_style</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Standard</numIndex>
+										<numIndex index="1">standard</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">Button count</numIndex>
+										<numIndex index="1">button_count</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">Box count</numIndex>
+										<numIndex index="1">box_count</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</j_layout_style>
+
+					<j_show_faces type="array">
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.show_faces</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config TYPE="array">
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</j_show_faces>
+
+					<j_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>450</default>
+							</config>
+						</TCEforms>
+					</j_width>
+
+					<j_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.height</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>100</default>
+							</config>
+						</TCEforms>
+					</j_height>
+
+					<j_font>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.arial</numIndex>
+										<numIndex index="1">arial</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.lucida_grande</numIndex>
+										<numIndex index="1">lucida+grande</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.segoe_ui</numIndex>
+										<numIndex index="1">segoe+ui</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.tahoma</numIndex>
+										<numIndex index="1">tahoma</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.trebuchet_ms</numIndex>
+										<numIndex index="1">trebuchet+ms</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.font.verdana</numIndex>
+										<numIndex index="1">verdana</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</j_font>
+
+					<j_color_scheme>
+						<TCEforms>
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme</label>
+							<displayCond>FIELD:type_form:=:subscribe_button</displayCond>
+							<config>
+								<type>select</type>
+								<eval>required</eval>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.color_scheme.dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</j_color_scheme>
+					<!-- Subscribe Button - End -->
+
+					<!-- Share Button - Begin -->
+					<k_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:share_button</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>http://developers.facebook.com/docs/plugins/share-button</default>
+							</config>
+						</TCEforms>
+					</k_doku>
+
+					<k_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.url</label>
+							<displayCond>FIELD:type_form:=:share_button</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</k_url>
+
+					<k_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:share_button</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>250</default>
+							</config>
+						</TCEforms>
+					</k_width>
+					<!-- Share Button - End -->
+
+
+					<!-- Embedded- Begin -->
+					<l_doku>
+						<TCEforms TYPE="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.manual</label>
+							<displayCond>FIELD:type_form:=:embedded</displayCond>
+							<config TYPE="array">
+								<type>none</type>
+								<default>https://developers.facebook.com/docs/plugins/embedded-posts/</default>
+							</config>
+						</TCEforms>
+					</l_doku>
+
+					<l_url type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.url_post</label>
+							<displayCond>FIELD:type_form:=:embedded</displayCond>
+							<config type="array">
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</l_url>
+
+					<l_width type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.field.width</label>
+							<displayCond>FIELD:type_form:=:embedded</displayCond>
+							<config type="array">
+								<size>5</size>
+								<max>5</max>
+								<checkbox>1</checkbox>
+								<eval>required,int</eval>
+								<type>input</type>
+								<default>500</default>
+							</config>
+						</TCEforms>
+					</l_width>
+					<!-- Embedded - End -->
+
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

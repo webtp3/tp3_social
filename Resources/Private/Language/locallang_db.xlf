@@ -3,9 +3,18 @@
 	<file source-language="de" datatype="plaintext" original="messages" date="2017-11-07T20:53:41Z" product-name="tp3_social">
 		<header/>
 		<body>
-			<trans-unit id="tx_tp3social_domain_model_tp3shares.tx_tp3_social_domain_model_tp3share">
-				<source>tp3 Shares</source>
-			</trans-unit>
+			<trans-unit id="tx_tp3_social_domain_model_tp3share">
+                <source>tp3 Shares</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3_social_domain_model_tp3share.description">
+                <source>Share Icons</source>
+            </trans-unit>
+			<trans-unit id="tx_tp3_social_tp3facebook">
+                <source>tp3 Facebook</source>
+            </trans-unit>
+            <trans-unit id="tx_tp3_social_tp3facebook.description">
+                <source>Show Facebook Page from tp3mods Settings</source>
+            </trans-unit>
 			<trans-unit id="tx_tp3social_domain_model_tp3shares.tx_tp3_social_domain_model_tp3share.description">
 				<source>Share Icons</source>
 			</trans-unit>

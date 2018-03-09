@@ -5,8 +5,8 @@ defined('TYPO3_MODE') || die();
  *
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    'Tp3Social',
+    'tp3_social',
     'Configuration/TypoScript',
     'Tp3share'
 );
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('Tp3Social', 'Configuration/TypoScript/Plugin', 'tp3social_tp3facebook');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('tp3_social', 'Configuration/TypoScript/Plugin', 'Tp3facebook');

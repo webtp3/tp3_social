@@ -12,4 +12,16 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['tp3social_tp
 /* Add the flexforms to the TCA */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('tp3social_tp3share', 'FILE:EXT:tp3_social/Configuration/FlexForms/flexform.xml');
 
+
+/* Set up the tt_content fields for the frontend plugins */
+
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['tp3social_tp3facebook']='layout,select_key,pages,recursive';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['tp3social_tp3facebook']='pi_flexform';
+
+/* Add the plugins */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(Array('LLL:EXT:tp3_social/Resources/Private/Languages/locallang_db.xlf:tx_tp3_social_tp3facebook', 'tp3social_tp3facebook'),'list_type', 'tp3_social');
+
+/* Add the flexforms to the TCA */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('tp3social_tp3facebook', 'FILE:EXT:tp3_social/Configuration/FlexForms/flexform_fbpage.xml');
+
 ?>

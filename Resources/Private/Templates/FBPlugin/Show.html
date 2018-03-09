@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+&lt;f:section name=&quot;main&quot;>
+<h1>Single View for FBPlugin</h1>
+
+&lt;f:flashMessages />
+<f:render partial="fBPlugin/Properties" arguments="{fBPlugin:fBPlugin}" />
+&lt;f:link.action action=&quot;list&quot;>Back to list<br />
+&lt;f:link.action action=&quot;new&quot;>New FBPlugin
+
+&lt;/html>

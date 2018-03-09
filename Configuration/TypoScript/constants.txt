@@ -50,7 +50,7 @@ plugin.tx_tp3social_tp3share {
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=BITapi
 		BITapi = R_666437839bbce9a5044fde7b4d39d2ff
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=layout
-		layout = style5
+		layout = style05
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=googleid
 		googleid ={$google_publisher}
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=googleid

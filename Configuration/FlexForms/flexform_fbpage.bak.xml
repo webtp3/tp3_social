@@ -1,0 +1,65 @@
+<T3DataStructure>
+<meta>
+	<langDisable>1</langDisable>
+</meta>         
+      <ROOT>
+        <type>array</type>
+        <el>
+			
+			<layout>
+			<TCEforms>
+				<label>LLL:EXT:tp3_social/Resources/Private/Language/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.layout</label>
+				<onChange>reload</onChange>
+				<config>
+					<type>select</type>
+					<renderType>selectSingle</renderType>
+
+					<items type="array">
+						<numIndex index="0" type="array">
+							<numIndex index="0">layout.Page</numIndex>
+							<numIndex index="1">Page</numIndex>
+						</numIndex>
+						
+
+					</items>
+				</config>
+			</TCEforms>
+		</layout>
+			
+
+			
+			<facebook>
+				<TCEforms>              
+					<exclude>1</exclude>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.facebook</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</facebook>
+			
+			<facebookname>
+				<TCEforms>              
+					<exclude>1</exclude>
+					<label>facebookname</label>
+					<config>
+						<type>input</type>
+					</config>
+				</TCEforms>
+			</facebookname>
+		
+			<facebookid>
+				<TCEforms>              
+					<exclude>1</exclude>
+					<label>facebookid</label>
+					<config>
+						<type>input</type>
+					</config>
+				</TCEforms>
+			</facebookid>
+			
+
+             
+        </el>
+      </ROOT>
+</T3DataStructure>
