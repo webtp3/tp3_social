@@ -85,7 +85,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
         foreach (explode(',', $vars) as $value) $$value = ($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value]) ? $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value] : $this->cObj->data['pi_flexform']['data']['sDEF']['lDEF'][$value]['vDEF'] ;
         $pagetitle 		= $GLOBALS['TSFE']->page['subtitle'] ? $GLOBALS['TSFE']->page['subtitle']: $GLOBALS['TSFE']->page['title'];
 
-        $realurl 		= 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+        $realurl 		= 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
         $sorting =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['sorting'];
         # - bitly
         $shortener =  $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.']['settings.']['shortener'];
@@ -185,19 +185,19 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
         #- youtube
         if($this->conf["settings"]["youtube"] == 1 && in_array($this->conf["settings"]["layout"], explode(',', $youtube_button))) {
-            $youtube_output = '<a title="YouTube" class="youtube '.$this->conf["settings"]["layout"].'" target="_blank" href="http://www.youtube.com/user/'.$youtubename.'">YouTube</a>';
+            $youtube_output = '<a title="YouTube" class="youtube '.$this->conf["settings"]["layout"].'" target="_blank" href="https://www.youtube.com/user/'.$youtubename.'">YouTube</a>';
         }
 
         #- tumblr
         if($this->conf["settings"]["tumblr"] == 1 && in_array($this->conf["settings"]["layout"], explode(',', $tumblr_button))) {
-            $this->pageRenderer->addFooterData('<script src="http://platform.tumblr.com/v1/share.js"></script>');
+            $this->pageRenderer->addFooterData('<script defer async="async"  src="https://platform.tumblr.com/v1/share.js"></script>');
 
-            $tumblr_output = '<a title="Tumblr" class="tumblr '.$this->conf["settings"]["layout"].'" target="_blank" href="http://www.tumblr.com/share/link?url='.urlencode($theurl).'&name='.urlencode($posttitle).'">Tumblr</a>';
+            $tumblr_output = '<a title="Tumblr" class="tumblr '.$this->conf["settings"]["layout"].'" target="_blank" href="https://www.tumblr.com/share/link?url='.urlencode($theurl).'&name='.urlencode($posttitle).'">Tumblr</a>';
         }
 
         #- vkontakte
         if($this->conf["settings"]["vkontakte"] == 1 && in_array($this->conf["settings"]["layout"], explode(',', $vkontakte_button))) {
-            $vkontakte_output = '<a title="VKontakte" class="vkontakte '.$this->conf["settings"]["layout"].'" target="_blank" href="http://vk.com/share.php?url='.urlencode($theurl).'">VKontakte</a>';
+            $vkontakte_output = '<a title="VKontakte" class="vkontakte '.$this->conf["settings"]["layout"].'" target="_blank" href="https://vk.com/share.php?url='.urlencode($theurl).'">VKontakte</a>';
         }
 
         #- flickr
@@ -206,8 +206,8 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
         }
         if($this->conf["settings"]["google"] == 1) {
             $boxpos = 'medium';
-            $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->conf["settings"]["googleid"].'"></script>');
-            $googleplus_output = '<a class="st_socialnetwork_g_'.$this->conf["settings"]["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
+         //   $this->pageRenderer->addFooterData('<script defer async="async"  src="https://apis.google.com/js/platform.js?publisherid='.$this->conf["settings"]["googleid"].'"></script>');
+            $googleplus_output = '<a class="st_socialnetwork_g_'.$this->conf["settings"]["layout"].'"><div class="g-plus" data-action="share" data-height="15" data-href="'.$realurl.'"data-size="'.$boxpos.'"></div></div>';
         }
 
         //# - style11 and style 12
@@ -235,19 +235,20 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
             if($this->conf["settings"]["xing"] == 1) {
                 $boxpos = ($this->conf["settings"]["layout"] == 'style11') ? 'right' : 'top' ;
                 $xing_output = '<div class="st_socialnetwork_x_'.$this->conf["settings"]["layout"].'"></div>';
-                $this->pageRenderer->addFooterData('<script src="//www.xing-share.com/js/external/share.js"></script>');
-                $this->pageRenderer->addFooterData('<script type="XING/Share" data-counter="'.$boxpos.'" data-lang="'.$lang_short.'" data-url="'.$realurl.'"></script>');
+                $this->pageRenderer->addFooterData('<script defer async="async"  src="https://www.xing-share.com/js/external/share.js"></script>');
+                $this->pageRenderer->addFooterData('<script defer async="async"  type="XING/Share" data-counter="'.$boxpos.'" data-lang="'.$lang_short.'" data-url="'.$realurl.'"></script>');
             }
 
             if($this->conf["settings"]["google"] == 1) {
                 $boxpos = ($this->conf["settings"]["layout"] == 'style11') ? 'medium' : 'tall' ;
-                $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->conf["settings"]["googleid"].'">{lang: \''.$lang_short.'\'}</script>');
-                $googleplus_output = '<div class="st_socialnetwork_g_'.$this->conf["settings"]["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
+             //   $this->pageRenderer->addFooterData('<script defer async="async"  >  window.___gcfg = { lang: \''.$lang_big.'\', parsetags: \'onload\'}</script>');
+              //  $this->pageRenderer->addFooterData('<script defer async="async"  src="https://apis.google.com/js/platform.js?publisherid='.$this->conf["settings"]["googleid"].'"></script>');
+                $googleplus_output = '<div class="st_socialnetwork_g_'.$this->conf["settings"]["layout"].'"><div class="g-plus" data-action="share" data-height="15" data-href="'.$realurl.'"data-size="'.$boxpos.'"></div></div>';
             }
 
             if($this->conf["settings"]["linkedin"] == 1) {
                 $boxpos = ($this->conf["settings"]["layout"] == 'style11') ? 'right' : 'top' ;
-                $this->pageRenderer->addFooterData('<script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-url="'.$realurl.'" data-counter="'.$boxpos.'"></script>');
+                $this->pageRenderer->addFooterData('<script defer async="async"  src="//platform.linkedin.com/in.js" type="text/javascript"></script><script defer async="async"  type="IN/Share" data-url="'.$realurl.'" data-counter="'.$boxpos.'"></script>');
                 $linkedin_output = '';
             }
 
@@ -257,14 +258,14 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
                   $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'window.___gcfg = {lang: \''.$lang_short.'\'};
                        (function() {
                        var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
-                       po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->conf["settings"]["googleid"].'&output=embed\';
+                       po.src = \'//apis.google.com/js/platform.js?publisherid='.$this->conf["settings"]["googleid"].'&output=embed\';
                        var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
                        })();');
               }*/
 
             if($this->conf["settings"]["t3n"] == 1) {
                 $boxpos = ($this->conf["settings"]["layout"] == 'style11') ? '' : '?count=vertical' ;
-                $this->pageRenderer->addFooterData('<script type="text/javascript" src="http://t3n.de/aggregator/ebutton/'.$boxpos.'"></script>');
+                $this->pageRenderer->addFooterData('<script defer async="async"  type="text/javascript" src="https://t3n.de/aggregator/ebutton/'.$boxpos.'"></script>');
             }
 
         }
@@ -275,18 +276,22 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
                  $this->pageRenderer->addJsFooterInlineCode($this->extKey."_gg",'window.___gcfg = {lang: \''.$lang_short.'\'};
           (function() {
           var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
-          po.src = \'//apis.google.com/js/plusone.js?publisherid='.$this->conf["settings"]["googleid"].'&output=embed\';
+          po.src = \'//apis.google.com/js/platform.js?publisherid='.$this->conf["settings"]["googleid"].'&output=embed\';
           var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
           })();
           ');
              }*/
             if($this->conf["settings"]["google"] == 1) {
                 $boxpos = 'vertical-bubble' ;
-                $this->pageRenderer->addFooterData('<script src="//apis.google.com/js/plusone.js?publisherid='.$this->conf["settings"]["googleid"].'">{lang: \''.$lang_short.'\'}</script>');
-                $googleplus_output = '<div class="st_socialnetwork_g_'.$this->conf["settings"]["layout"].'"><div class="g-plusone" data-size="'.$boxpos.'"></div></div>';
+            //    $this->pageRenderer->addFooterData('<script defer async="async"  >  window.___gcfg = { lang: \''.$lang_short.'\', parsetags: \'onload\'}</script>');
+             //   $this->pageRenderer->addFooterData('<script defer async="async"  src="https://apis.google.com/js/platform.js?publisherid='.$this->conf["settings"]["googleid"].'"></script>');
+                $googleplus_output = '<div class="st_socialnetwork_g_'.$this->conf["settings"]["layout"].'"><div class="g-plus" data-action="share" data-height="15" data-href="'.$realurl.'" data-size="'.$boxpos.'" ></div></div>';
             }
         }
-
+        if($this->conf["settings"]["google"] == 1) {
+            $this->pageRenderer->addFooterData('<script defer async="async"  >  window.___gcfg = { lang: \''.$lang_big.'\', parsetags: \'explicit\'}</script>');
+            $this->pageRenderer->addFooterData('<script defer async="async"  src="https://apis.google.com/js/platform.js?publisherid='.$this->conf["settings"]["googleid"].'"></script>');
+        }
         $sorting = $sorting ? $sorting : 'twitter, facebook, meinvz, youtube, tumblr, vkontakte, flickr, googleplus, googleshare, xing, linkedin, t3n';
         foreach(explode(',', $sorting) as $s) {
             $see_output = strtolower(trim($s)).'_output';
@@ -315,7 +320,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
         if($this->conf['staticTemplateCheck'] != 1){
             return '<b>Please include the static template!</b>';
         } elseif(empty($this->conf['appID'])){
-            return '<b>Enter your App ID in the configuration of this plugin in the Extension Manager.</b><br /><i>If you haven\'t got one, you can get an App ID here: <a href="http://developers.facebook.com/setup/" target="_blank">http://developers.facebook.com/setup/</a></i>';
+            return '<b>Enter your App ID in the configuration of this plugin in the Extension Manager.</b><br /><i>If you haven\'t got one, you can get an App ID here: <a href="https://developers.facebook.com/setup/" target="_blank">https://developers.facebook.com/setup/</a></i>';
         }
 
         // decide if plugin is configured via Flexform or TypoScript
@@ -422,7 +427,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
         if ($content != '') {
             if($this->conf['W3Cmode'] == 1){
-                $content = '<script language="javascript" type="text/javascript">
+                $content = '<script defer async="async"  language="javascript" type="text/javascript">
                     //<![CDATA[
                     document.write(\''.str_replace('
                     ','',$content).'\');
@@ -441,7 +446,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Activity Feed.
-     * http://developers.facebook.com/docs/reference/plugins/activity/
+     * https://developers.facebook.com/docs/reference/plugins/activity/
      *
      * @return	STRING	$content	...
      */
@@ -463,7 +468,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Comments box.
-     * http://developers.facebook.com/docs/reference/plugins/comments/
+     * https://developers.facebook.com/docs/reference/plugins/comments/
      *
      * @return	STRING	$content	...
      */
@@ -480,7 +485,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Facepile plugin.
-     * http://developers.facebook.com/docs/reference/plugins/facepile/
+     * https://developers.facebook.com/docs/reference/plugins/facepile/
      *
      * @return	STRING	$content	...
      */
@@ -500,7 +505,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Like button.
-     * http://developers.facebook.com/docs/reference/plugins/like/
+     * https://developers.facebook.com/docs/reference/plugins/like/
      *
      * @return	STRING	$content	...
      */
@@ -532,7 +537,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Like Box.
-     * http://developers.facebook.com/docs/reference/plugins/like-box/
+     * https://developers.facebook.com/docs/reference/plugins/like-box/
      *
      * @return	STRING	$content	...
      */
@@ -556,7 +561,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Recommendations plugin.
-     * http://developers.facebook.com/docs/reference/plugins/recommendations/
+     * https://developers.facebook.com/docs/reference/plugins/recommendations/
      *
      * @return	STRING	$content	...
      */
@@ -577,7 +582,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Send Button.
-     * http://developers.facebook.com/docs/reference/plugins/send/
+     * https://developers.facebook.com/docs/reference/plugins/send/
      *
      * @return	STRING	$content	...
      */
@@ -601,7 +606,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Subscribe Button.
-     * http://developers.facebook.com/docs/reference/plugins/subscribe/
+     * https://developers.facebook.com/docs/reference/plugins/subscribe/
      *
      * @return	STRING	$content	...
      */
@@ -622,7 +627,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Share Button.
-     * http://developers.facebook.com/docs/plugins/share-button
+     * https://developers.facebook.com/docs/plugins/share-button
      *
      * @return	STRING	$content	...
      */

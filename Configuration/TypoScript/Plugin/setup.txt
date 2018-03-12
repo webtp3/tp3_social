@@ -1,6 +1,6 @@
 plugin.tx_tp3social_tp3facebook = USER_INT
 plugin.tx_tp3social_tp3facebook {
-  userFunc = Tp3\Tp3Facebook\Plugin\FBPlugins->main
+  userFunc = Tp3\Tp3Social\Plugin\Tp3SharesPlugin->getFacebook
   staticTemplateCheck = 1
 
   appID = {$plugin.tx_tp3social_tp3facebook.appID}

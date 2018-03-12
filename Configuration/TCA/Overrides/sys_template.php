@@ -9,4 +9,4 @@ defined('TYPO3_MODE') || die();
     'Configuration/TypoScript',
     'Tp3share'
 );
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('tp3_social', 'Configuration/TypoScript/Plugin', 'Tp3facebook');
+//\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('tp3_social', 'Configuration/TypoScript/Plugin', 'Tp3facebook');

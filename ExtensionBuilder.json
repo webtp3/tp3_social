@@ -114,7 +114,7 @@
             "sourceLanguage": "de",
             "state": "beta",
             "targetVersion": "7.6.0-7.6.99",
-            "version": "1.0.2"
+            "version": "1.0.5"
         },
         "extensionKey": "tp3_social",
         "name": "tp3 social",

@@ -10,7 +10,11 @@ call_user_func(
             'Tp3share',
             'tp3 Shares'
         );
-
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Tp3.Tp3Social',
+            'Tp3facebook',
+            'tp3 Facebook'
+        );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_tp3social_domain_model_tp3shares', 'EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_tp3social_tp3facebook', 'EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf');

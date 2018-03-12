@@ -42,7 +42,7 @@ call_user_func(
 	   }'
 	);
         // wizards
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+       /* \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             'mod {
                 wizards.newContentElement.wizardItems.plugins {
                     elements {
@@ -51,15 +51,15 @@ call_user_func(
                             title = LLL:EXT:tp3_social/Resources/Private/Language/locallang_db.xlf:tx_tp3_social_tp3facebook
                             description = LLL:EXT:tp3_social/Resources/Private/Language/locallang_db.xlf:tx_tp3_social_tp3facebook.description
                             tt_content_defValues {
-                                CType = page
-                                list_type = tp3social_tp3share
+                                CType = list
+                                list_type = tp3social_tp3facebook
                             }
                         }
                     }
                     show = *
                 }
            }'
-        );
+        );*/
     },
     $_EXTKEY
 );
