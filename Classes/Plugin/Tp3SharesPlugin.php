@@ -107,6 +107,8 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
             $this->cObjRenderer = $this->objectManager->get(ContentObjectRenderer::class);
         }
         $this->ffConf['layout'] = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'layout');
+        if($this->ffConf['layout'] != "")$this->conf["settings"]["layout"] = $this->ffConf['layout'];
+
         $this->pageRenderer->addCssFile('typo3conf/ext/tp3_social/Resources/Public/Css/'.($this->ffConf['layout'] != "" ? $this->ffConf['layout'] : $this->conf["settings"]["layout"]) .'/style.css');
 
         //$this->response->addAdditionalHeaderData('<link href="'.\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath( $this->extKey ).'Resources/Public/Css/'.$this->settings["layout"].'/style.css" rel="stylesheet" type="text/css" />');
