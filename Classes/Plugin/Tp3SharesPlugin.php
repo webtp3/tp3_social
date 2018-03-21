@@ -156,13 +156,21 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
             //   $facebooklink = 'https://www.facebook.com/feed.php?app_id='.$this->conf["settings"]["facebookid"].'&display=popup&caption='.urlencode($pagetitle).'&link='.$theurl.'&redirect_uri=https://www.facebook.com/'.$this->conf["settings"]["facebookname"];
             $facebooklink = 'https://www.facebook.com/sharer.php?u='.urlencode($theurl);
             $facebook_output = '<a title="Facebook" class="facebook '.$this->conf["settings"]["layout"].'" target="_blank" href="'.$facebooklink.'">Facebook</a>';
-            $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/'.$lang_big.'/all.js#xfbml=1&appId='.$this->conf["settings"]["facebookid"].'";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, "script", "facebook-jssdk"));');
+            $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'window.fbAsyncInit = function() {
+                    FB.init({
+                      appId            : \''.$this->conf["settings"]["facebookid"].'\',
+                      autoLogAppEvents : true,
+                      xfbml            : true,
+                      version          : \'v2.12\'
+                    });
+                  };
+			 (function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "https://connect.facebook.net/'.$lang_big.'/sdk.js";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, \'script\', \'facebook-jssdk\'));');
         }
 
         # - meinvz
@@ -224,13 +232,21 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
             if($this->conf["settings"]["facebook"] == 1) {
                 $boxpos = ($this->conf["settings"]["layout"] == 'style11') ? 'button_count' : 'box_count' ;
                 $facebook_output = '<div id="fb-root"></div><div class="st_socialnetwork_f_'.$this->conf["settings"]["layout"].'"><div class="fb-like" data-href="'.$realurl.'" data-send="false" data-layout="'.$boxpos.'" data-width="90" data-show-faces="true"></div></div>';
-                $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/'.$lang_big.'/all.js#xfbml=1&appId='.$this->conf["settings"]["facebookid"].'";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, "script", "facebook-jssdk"));');
+                $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'window.fbAsyncInit = function() {
+                    FB.init({
+                      appId            : \''.$this->conf["settings"]["facebookid"].'\',
+                      autoLogAppEvents : true,
+                      xfbml            : true,
+                      version          : \'v2.12\'
+                    });
+                  };
+			 (function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "https://connect.facebook.net/'.$lang_big.'/all.js";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, \'script\', \'facebook-jssdk\'));');
 
             }
 
@@ -380,17 +396,25 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
             }
         }
 
-        if(!empty($this->ffConf['type_form'])){
-            $GLOBALS['TSFE']->additionalFooterData[$this->extKey] = '
-			<div id="fb-root"></div>
+        if(!empty($this->ffConf['type_form']) && $this->conf['loadAPI'] == 1 ){
+            $GLOBALS['TSFE']->additionalFooterData[$this->extKey] = '<div id="fb-root"></div>
 			<script>
-				(function(d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) return;
-					js = d.createElement(s); js.id = id;
-					js.src = "//connect.facebook.net/'.$this->marker['###LOCALE###'].'/sdk.js#xfbml=1&appId='.$this->marker['###APP_ID###'].'&version=v2.0";
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, \'script\', \'facebook-jssdk\'));
+			 window.fbAsyncInit = function() {
+                    FB.init({
+                      appId            : \''.$this->marker['###APP_ID###'].'\',
+                      autoLogAppEvents : true,
+                      xfbml            : true,
+                      version          : \'v2.12\'
+                    });
+                  };
+			 (function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "https://connect.facebook.net/'.$this->marker['###LOCALE###'].'/sdk.js";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, \'script\', \'facebook-jssdk\'));
+			
 			</script>';
         }
 

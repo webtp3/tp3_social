@@ -25,17 +25,32 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      *
      * @var string;
      */
-    private static $extKey = "tp3_social";
+    public $extKey = "tp3_social";
     /**
      *
      * @var string;
      */
-    private static $layout = "";
+    public $layout = "";
     /**
      *
      * @var array;
      */
     private static $conf;
+
+    /**
+     * if apis should be loeaded or are already true false or loaded
+     * @var array;
+     */
+    public $loadapis = [
+        "facebook" => true,
+        "google" => true,
+        "linkedin" => true,
+        "twitter" => true,
+        "flickr" => true,
+        "xing" => true,
+        "tumblr" => true,
+
+    ];
 
     /**
      * action translate
@@ -121,7 +136,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * This method assigns some default variables to the view
      */
     private function setDefaultViewVars() {
-        if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getExtensionVersion('extbase')) >= 1003000) {
+     /*   if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getExtensionVersion('extbase')) >= 1003000) {
             $cObjData = $this->configurationManager->getContentObject()->data;
         } else {
             $cObjData = $this->request->getContentObjectData();
@@ -140,7 +155,7 @@ class Tp3SharesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $this->settings[$key] = $cObj['data']['sDEF']['lDEF'][$key]['vDEF'] ?  $cObj['data']['sDEF']['lDEF'][$key]['vDEF'] : $this->settings[$key];
             }
         $this->cObjRenderer =$this->objectManager->get('TYPO3\\CMS\\Frontend\\ContentObject\\ContentObjectRenderer');
-
+*/
         $this->pageRenderer =  $this->objectManager->get('TYPO3\\CMS\\Core\\Page\\PageRenderer');
         $this->view->assign('cObjData', $cObj);
     }

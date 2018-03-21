@@ -7,7 +7,7 @@ plugin.tx_tp3social_tp3facebook {
   language = {$plugin.tx_tp3social_tp3facebook.language}
   templateFile = {$plugin.tx_tp3social_tp3facebook.templateFile}
   W3Cmode = 0
-
+  loadAPI = {$plugin.tx_tp3social_tp3facebook.loadAPI}
 
   # choose one of these possibilities:
   # activity_feed, comments, facepile, like_button, like_box, live_stream, login_button, recommendations, send_button, subscribe_button

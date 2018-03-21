@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'tp3 social',
-    'description' => 'Share Icons',
+    'description' => 'Share Icons & Facebook integration',
     'category' => 'plugin',
     'author' => 'Thomas Ruta',
     'author_email' => 'email@thomasruta.de',
@@ -21,13 +21,29 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '1.0.5',
-    'constraints' => [
-        'depends' => [
-            'typo3' => '7.6.0-8.9.99',
-            'tp3mods' => '*',
-        ],
-        'conflicts' => [],
-        'suggests' => [],
-    ],
+    'version' => '1.0.6',
+    'constraints' =>
+        array (
+            'depends' =>
+                array (
+                    'typo3' => '7.6.0-8.9.99',
+                ),
+            'conflicts' =>
+                array (
+                ),
+            'suggests' =>
+                array (
+                    'bootstrap_package' => '8.0.0-8.9.99',
+                    'tp3mods' => '*',
+                ),
+        ),
+    'autoload' =>
+        array (
+            'psr-4' =>
+                array (
+                    'Tp3\\Tp3Social\\' => 'Classes',
+                ),
+        ),
+    'clearcacheonload' => false,
+    'author_company' => 'tp3',
 ];

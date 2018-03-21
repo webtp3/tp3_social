@@ -159,7 +159,7 @@
 				<TCEforms>              
 					<exclude>1</exclude>
 					<displayCond>FIELD:layout:IN:style01,style03,style04,style05,style06,style07,style08,style09,style10,style11,style12,style13,style14</displayCond>
-					<label>tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.linkedin</label>
+					<label>LLL:EXT:tp3_social/Resources/Private/Language/locallang_csh_tx_tp3social_domain_model_tp3shares.xlf:tt_content.pi_flexform.linkedin</label>
 					<config>
 						<type>check</type>
 					</config>

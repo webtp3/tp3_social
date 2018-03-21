@@ -3,6 +3,7 @@ return [
     'ctrl' => [
         'title'	=> 'LLL:EXT:tp3_social/Resources/Private/Language/locallang_db.xlf:tx_tp3social_domain_model_tp3shares',
         'label' => 'style',
+        'label' => 'list_type',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -17,13 +18,16 @@ return [
             'endtime' => 'endtime',
         ],
 		'searchFields' => 'style,twitter,facebook,google,youtube,xing',
-        'iconfile' => 'EXT:tp3_social/Resources/Public/Icons/tx_tp3social_domain_model_tp3shares.gif'
+        'iconfile' => 'EXT:tp3_social/Resources/Public/Icons/user_plugin_tp3share.svg',
+        'typeicon_classes' => [
+            'default' => 'ext-tp3_social-wizard-icon'
+        ],
     ],
     'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, style, twitter, facebook, google, youtube, xing',
+		'showRecordFieldList' => 'header, sys_language_uid, l10n_parent, l10n_diffsource, hidden, ',
     ],
     'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, style, twitter, facebook, google, youtube, xing, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'header, sys_language_uid, l10n_parent, l10n_diffsource, hidden, style --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 		'sys_language_uid' => [
@@ -84,24 +88,30 @@ return [
         ],
 		'starttime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
                 'size' => 13,
                 'eval' => 'datetime',
+                'renderType' => 'inputDateTime',
                 'default' => 0,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'endtime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
                 'size' => 13,
                 'eval' => 'datetime',
+                'renderType' => 'inputDateTime',
                 'default' => 0,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038)
                 ]

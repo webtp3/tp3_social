@@ -1,9 +1,7 @@
 <?php
 defined('TYPO3_MODE') || die('Access denied.');
 
-call_user_func(
-    function($extKey)
-	{
+
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Tp3.Tp3Social',
@@ -28,7 +26,8 @@ call_user_func(
 			wizards.newContentElement.wizardItems.plugins {
 				elements {
 					tp3share {
-						icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/user_plugin_tp3share.svg
+					     iconIdentifier = ext-'.$_EXTKEY.'-wizard-icon
+
 						title = LLL:EXT:tp3_social/Resources/Private/Language/locallang_db.xlf:tx_tp3_social_domain_model_tp3share
 						description = LLL:EXT:tp3_social/Resources/Private/Language/locallang_db.xlf:tx_tp3_social_domain_model_tp3share.description
 						tt_content_defValues {
@@ -41,13 +40,15 @@ call_user_func(
 			}
 	   }'
 	);
+	
+	
         // wizards
-       /* \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             'mod {
                 wizards.newContentElement.wizardItems.plugins {
                     elements {
                         tp3facebook {
-                            icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/user_plugin_tp3facebook.svg
+                            iconIdentifier = ext-'.$_EXTKEY.'-fbpage-wizard-icon
                             title = LLL:EXT:tp3_social/Resources/Private/Language/locallang_db.xlf:tx_tp3_social_tp3facebook
                             description = LLL:EXT:tp3_social/Resources/Private/Language/locallang_db.xlf:tx_tp3_social_tp3facebook.description
                             tt_content_defValues {
@@ -59,7 +60,24 @@ call_user_func(
                     show = *
                 }
            }'
-        );*/
-    },
-    $_EXTKEY
-);
+        );
+
+        /*
+   * Icons
+   */
+        if (TYPO3_MODE === 'BE') {
+            $icons = [
+                'ext-'.$_EXTKEY.'-wizard-icon' => 'user_plugin_tp3share.svg',
+                'ext-'.$_EXTKEY.'-fbpage-wizard-icon' => 'user_plugin_tp3facebook.svg',
+
+            ];
+            $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+            foreach ($icons as $identifier => $path) {
+                $iconRegistry->registerIcon(
+                    $identifier,
+                    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                    ['source' => 'EXT:'.$_EXTKEY.'/Resources/Public/Icons/' . $path]
+                );
+            }
+        }
+   

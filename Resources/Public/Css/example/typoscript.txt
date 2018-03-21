@@ -29,8 +29,8 @@
 
 
 
-###YOUR_MARKER### < plugin.tx_stsocialnetwork_pi1
-plugin.tx_stsocialnetwork_pi1{
+###YOUR_MARKER### < plugin.tx_tp3social_tp3share
+plugin.tx_tp3social_tp3share{
 	twitter 	= 1
 	facebook 	= 1
 	google 		= 1
