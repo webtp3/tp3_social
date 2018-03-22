@@ -80,7 +80,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
         $output = '';
         $error	= '';
-
+        $this->setDefaultViewVars();
         $vars = 'twitter,facebook,google,meinvz,youtube,xing,linkedin,tumblr,vkontakte,flickr,googleshare,t3n,twittername,youtubename,facebookname,googlename,flickrname,BITusername,BITapi,layout,shortener,sorting,facebookid,googleid';
         foreach (explode(',', $vars) as $value) $$value = ($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value]) ? $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_tp3social_tp3share.'][$value] : $this->cObj->data['pi_flexform']['data']['sDEF']['lDEF'][$value]['vDEF'] ;
         $pagetitle 		= $GLOBALS['TSFE']->page['subtitle'] ? $GLOBALS['TSFE']->page['subtitle']: $GLOBALS['TSFE']->page['title'];
@@ -97,15 +97,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
               $error .= (!$BITapi || $BITapi == '') 			? $this->gettranslation('error_bit_api').'<br />' 		: '' ;
               if($error == '') $biturl =  $this->make_bitly_url($realurl,$BITusername,$BITapi,'json');
           }*/
-       if ($this->objectManager === null) {
-            $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-        }
-        if ($this->pageRenderer === null) {
-            $this->pageRenderer = $this->objectManager->get(PageRenderer::class);
-        }
-        if ($this->cObjRenderer === null) {
-            $this->cObjRenderer = $this->objectManager->get(ContentObjectRenderer::class);
-        }
+
         $this->ffConf['layout'] = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'layout');
         if($this->ffConf['layout'] != "")$this->conf["settings"]["layout"] = $this->ffConf['layout'];
 
@@ -244,7 +236,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
                  var js, fjs = d.getElementsByTagName(s)[0];
                  if (d.getElementById(id)) {return;}
                  js = d.createElement(s); js.id = id;
-                 js.src = "https://connect.facebook.net/'.$lang_big.'/all.js";
+                 js.src = "https://connect.facebook.net/'.$lang_big.'/sdk.js";
                  fjs.parentNode.insertBefore(js, fjs);
                }(document, \'script\', \'facebook-jssdk\'));');
 
@@ -338,9 +330,9 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
         if($this->conf['staticTemplateCheck'] != 1){
             return '<b>Please include the static template!</b>';
         } elseif(empty($this->conf['appID'])){
-            return '<b>Enter your App ID in the configuration of this plugin in the Extension Manager.</b><br /><i>If you haven\'t got one, you can get an App ID here: <a href="https://developers.facebook.com/setup/" target="_blank">https://developers.facebook.com/setup/</a></i>';
+            return '<b>Enter your App ID in the configuration of this plugin in the Extension Manager.</b><br /><i>If you haven\'t got one, you can get an App ID here: <a href="http://developers.facebook.com/setup/" target="_blank">http://developers.facebook.com/setup/</a></i>';
         }
-
+        $this->setDefaultViewVars();
         // decide if plugin is configured via Flexform or TypoScript
         if ($this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'type_form') != '') {
             $mode = 'ff';
@@ -390,18 +382,17 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 				<meta property="fb:app_id" content="'.$this->conf['appID'].'" />
 			';
             if($this->conf['W3Cmode'] == 1){
-                $GLOBALS['TSFE']->additionalHeaderData[$this->extKey] = '<!-- '.$addData.' -->';
+                $this->pageRendere->addFooterData(['<!-- '.$addData.' -->']);
             } else {
-                $GLOBALS['TSFE']->additionalHeaderData[$this->extKey] = $addData;
+                $this->pageRendere->addFooterData([ $addData]);
             }
         }
 
         if(!empty($this->ffConf['type_form']) && $this->conf['loadAPI'] == 1 ){
-            $GLOBALS['TSFE']->additionalFooterData[$this->extKey] = '<div id="fb-root"></div>
-			<script>
-			 window.fbAsyncInit = function() {
+            $content = '<div id="fb-root"></div>';
+            $this->pageRenderer->addJsFooterInlineCode($this->extKey."_fb",'window.fbAsyncInit = function() {
                     FB.init({
-                      appId            : \''.$this->marker['###APP_ID###'].'\',
+                      appId            : \''.$this->conf['appID'].'\',
                       autoLogAppEvents : true,
                       xfbml            : true,
                       version          : \'v2.12\'
@@ -413,9 +404,8 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
                  js = d.createElement(s); js.id = id;
                  js.src = "https://connect.facebook.net/'.$this->marker['###LOCALE###'].'/sdk.js";
                  fjs.parentNode.insertBefore(js, fjs);
-               }(document, \'script\', \'facebook-jssdk\'));
-			
-			</script>';
+               }(document, \'script\', \'facebook-jssdk\'));');
+
         }
 
         switch($this->ffConf['type_form']){
@@ -443,7 +433,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
             case 'subscribe_button':
                 $content .= $this->displaySubscribeButton();
                 break;
-            case 'share_button':
+            case 'fan_box':
                 $content .= $this->displayShareButton();
                 break;
             case 'embedded':
@@ -453,7 +443,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
         if ($content != '') {
             if($this->conf['W3Cmode'] == 1){
-                $content = '<script defer async="async"  language="javascript" type="text/javascript">
+                $content = '<script language="javascript" type="text/javascript">
                     //<![CDATA[
                     document.write(\''.str_replace('
                     ','',$content).'\');
@@ -472,7 +462,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Activity Feed.
-     * https://developers.facebook.com/docs/reference/plugins/activity/
+     * http://developers.facebook.com/docs/reference/plugins/activity/
      *
      * @return	STRING	$content	...
      */
@@ -494,7 +484,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Comments box.
-     * https://developers.facebook.com/docs/reference/plugins/comments/
+     * http://developers.facebook.com/docs/reference/plugins/comments/
      *
      * @return	STRING	$content	...
      */
@@ -511,7 +501,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Facepile plugin.
-     * https://developers.facebook.com/docs/reference/plugins/facepile/
+     * http://developers.facebook.com/docs/reference/plugins/facepile/
      *
      * @return	STRING	$content	...
      */
@@ -531,7 +521,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Like button.
-     * https://developers.facebook.com/docs/reference/plugins/like/
+     * http://developers.facebook.com/docs/reference/plugins/like/
      *
      * @return	STRING	$content	...
      */
@@ -562,8 +552,8 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
 
     /**
-     * Displays the Like Box.
-     * https://developers.facebook.com/docs/reference/plugins/like-box/
+     * Displays the Page (Like Box).
+     * https://developers.facebook.com/docs/plugins/page-plugin
      *
      * @return	STRING	$content	...
      */
@@ -574,7 +564,9 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
             $content = '';
         }
         $template = $this->cObj->getSubpart($this->templateFile, '###DISPLAY_LIKE_BOX'.$this->templatePrefix.'###');
-        $this->marker['###E_SHOW_STREAM###'] = ($this->marker['###E_SHOW_STREAM###'] == 1 ? 'true' : 'false');
+        //fall back for old api entries
+        if($this->marker['###E_SHOW_STREAM###'] == 1)  $this->marker['###E_SHOW_STREAM###'] = 'timeline';
+
         $this->marker['###E_SHOW_HEADER###'] = ($this->marker['###E_SHOW_HEADER###'] == 1 ? 'true' : 'false');
         $this->marker['###E_SHOW_FACES###'] = ($this->marker['###E_SHOW_FACES###'] == 1 ? 'true' : 'false');
         $this->marker['###E_SHOW_BORDER###'] = ($this->marker['###E_SHOW_BORDER###'] == 1 ? 'true' : 'false');
@@ -587,7 +579,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Recommendations plugin.
-     * https://developers.facebook.com/docs/reference/plugins/recommendations/
+     * http://developers.facebook.com/docs/reference/plugins/recommendations/
      *
      * @return	STRING	$content	...
      */
@@ -608,7 +600,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Send Button.
-     * https://developers.facebook.com/docs/reference/plugins/send/
+     * http://developers.facebook.com/docs/reference/plugins/send/
      *
      * @return	STRING	$content	...
      */
@@ -632,7 +624,7 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Subscribe Button.
-     * https://developers.facebook.com/docs/reference/plugins/subscribe/
+     * http://developers.facebook.com/docs/reference/plugins/subscribe/
      *
      * @return	STRING	$content	...
      */
@@ -653,12 +645,13 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
     /**
      * Displays the Share Button.
-     * https://developers.facebook.com/docs/plugins/share-button
+     * http://developers.facebook.com/docs/plugins/share-button
      *
      * @return	STRING	$content	...
      */
     function displayShareButton(){
         $template = $this->cObj->getSubpart($this->templateFile, '###DISPLAY_SHARE_BUTTON###');
+        $this->marker['###K_WIDTH###'] = (is_integer($this->marker['###K_WIDTH###']) ? 'small' :  $this->marker['###K_WIDTH###'] );
         $content = $this->cObj->substituteMarkerArray($template, $this->marker);
         return $content;
     }
@@ -680,17 +673,21 @@ class Tp3SharesPlugin extends  \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 
 
 
-
     /**
      * This method assigns some default variables to the view
      */
     private function setDefaultViewVars() {
+        if ($this->objectManager === null) {
+            $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        }
+        if ($this->pageRenderer === null) {
+            $this->pageRenderer = $this->objectManager->get(PageRenderer::class);
+        }
+        if ($this->cObjRenderer === null) {
+            $this->cObjRenderer = $this->objectManager->get(ContentObjectRenderer::class);
+        }
 
-        $this->extKey = "Tp3Social";
-    	$this->layout = $this->conf["settings"]["layout"] ? $this->conf["settings"]["layout"] : "style05";
-    	//$this->cObj = GeneralUtility::makeInstance(TYPO3\\CMS\\Frontend\\ContentObject\\ContentObjectRenderer);
-    	$this->pageRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Page\\PageRenderer');
-    	//$this->view->assign('cObjData', $cObjData);
     }
+
     
 }
