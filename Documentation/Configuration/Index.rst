@@ -13,9 +13,11 @@ Configuration Reference
 
 Configure dependent variabels:
 
-         # cat=plugin.tx_tp3social_tp3share//a; type=string; label=twitter
-          twitter 	= 1
-          # cat=plugin.tx_tp3social_tp3share//a; type=string; label=social
+.. code-block:: typoscript
+
+        # cat=plugin.tx_tp3social_tp3share//a; type=string; label=twitter
+        twitter 	= 1
+        # cat=plugin.tx_tp3social_tp3share//a; type=string; label=social
 		social 	= 1
 		# cat=plugin.tx_tp3social_tp3share//a; type=string; label=google
 		google 		= 1
