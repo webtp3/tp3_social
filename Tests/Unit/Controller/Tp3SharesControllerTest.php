@@ -1,12 +1,15 @@
 <?php
 namespace Tp3\Tp3Social\Tests\Unit\Controller;
 
+
+use Nimut\TestingFramework\TestCase\UnitTestCase;
+
 /**
  * Test case.
  *
  * @author Thomas Ruta <email@thomasruta.de>
  */
-class Tp3SharesControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class Tp3SharesControllerTest extends UnitTestCase
 {
     /**
      * @var \Tp3\Tp3Social\Controller\Tp3SharesController
@@ -37,7 +40,7 @@ class Tp3SharesControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $tp3SharesRepository = $this->getMockBuilder(\::class)
+        $tp3SharesRepository = $this->getMockBuilder(\Tp3\Tp3Social\Domain\Repository\Tp3ShareRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
